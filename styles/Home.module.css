@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&family=ZCOOL+QingKe+HuangYou&display=swap');  
+  
+#main {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 100vh;
+    height: 100%;
+    background: #1a1a2e; /* Dark night sky */
+    background-image: url('https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/starlight_1.png'); /* Optional: starry night background */
+    color: #e3dccb; /* Parchment-like light cream for better readability */
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    z-index: 80;
+    row-gap: 48px;
+}
+
+#menu_container{ 
+    width: 100vw;
+    position: relative;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 48px;
+}
+
+#canvas {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Make the canvas perfectly round */
+    border: 2px solid #ccb7ae; /* Subtle, light mystical border color */
+    box-shadow: 0 0 15px #ffffff, /* White inner glow for brightness */
+                 0 0 30px #bb99ff, /* Soft outer glow for a magical feel */
+                 0 0 45px #a17fe0, /* Deeper purple for mystical depth */
+                 0 0 60px #a17fe0 inset; /* Inner glow to simulate depth of a crystal ball */
+    background: radial-gradient(circle at center, #000000 30%, #050514 60%, #6a5acd 100%);
+    position: relative;
+    z-index: 100;
+    overflow: hidden; /* Ensure effects stay within the circle */
+    margin-top: 12vh;
+    cursor: pointer;
+}
+
+#nextButton {
+  position: absolute;
+  z-index: 100;
+  bottom: 128px;
+  right: 0;
+  margin-right: 48px;
+  margin-bottom: 128px;
+  cursor: pointer; /* Makes it clear it's clickable */
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transformation on click */
+}
+
+#nextButton:hover {
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+#nextButton:active {
+    transform: scale(0.95); /* Slight decrease when clicked */
+}
+
+#smb {
+    width: 16vw;  
+}
+
+#character_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+}
+
+#speech {
+    bottom: 12vh;
+    width: 14vw; /* Adjust based on the actual size of your speech bubble image */
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/Group%2010%20(1).png');
+    background-size: cover; /* Ensure the background image covers the div completely */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#chinese_name {
+    font-family: "ZCOOL QingKe HuangYou", sans-serif;
+    font-size: 64px;
+    color: #9a8c98; /* Soft lilac */
+    position: absolute;
+    text-align: center; /* Center the text horizontally */
+    margin-bottom: 4vh;
+}
+
+#name {
+    font-family: "LucidDream";
+    font-size: 48px;
+    color: #9a8c98; /* Soft lilac */
+    text-align: center;
+}
+
+#constellation {
+  width: 820px;
+    position: absolute;
+    top: 0;
+    z-index: -1; 
+    pointer-events: none; 
+    animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#textbox:focus {
+    box-shadow: 
+        0 0 10px #fff,
+        0 0 20px #D4AF37 inset,
+        0 0 35px #a17fe0,
+        0 0 45px #a17fe0 inset;
+    transform: scale(1.03);
+}
+
+
+.title {
+    font-size: 6vh;
+    font-family: 'LucidDream';
+}
+
+
+.keyword_bubble {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    color: white;
+    font-size: 2vh;
+    background-color: #6a5acd; /* Default color, will be overridden inline */
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+
+.advice {
+    font-style: italic;
+    color: #8B4513; /* Saddle brown for a subtle emphasis */
+}
+
+.meaning, .description {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+.chat {
+    max-width: 100vw; 
+    width: 100%;
+    height: 40vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    background: "linear-gradient(to bottom right, #6a5acd, #1a1a2e)";
+    background-color: #1a1a2e;
+    box-shadow: 0 0 15px #ffffff, /* White inner glow for brightness */
+    0 0 30px #bb99ff, /* Soft outer glow for a magical feel */
+    0 0 45px #a17fe0, /* Deeper purple for mystical depth */
+    0 0 60px #a17fe0 inset; /* Inner glow to simulate depth of a crystal ball */
+    background-blend-mode: luminosity;
+    padding-right: 8vw;
+    padding-left: 8vw;
+    padding-top: 4vw;
+    padding-bottom: 2vw;
+}
+

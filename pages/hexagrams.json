@@ -1,0 +1,1263 @@
+[
+    {
+      "id": 1,
+      "name": "The Creative",
+      "chinese_name": "乾 (Qián)",
+      "representation": "111111",
+      "overall_meaning": "The essence of the creative is power, the power to bring forth, to produce, to create.",
+      "advice": "Maintain firm correctness to ensure good fortune. Consider the origins of your actions.",
+      "keywords": ["initiative", "forcefulness", "power", "creation"],
+      "creative_description": "As the sky above, the powerful force of creation ignites new beginnings and limitless potential.",
+      "lines": [
+        {
+          "line_number": 1,
+          "text": "Hidden dragon. Do not act.",
+          "interpretation": "Potential is hidden and not yet visible. Wait for the right moment."
+        },
+        {
+          "line_number": 2,
+          "text": "Dragon appearing in the field. It furthers one to see the great man.",
+          "interpretation": "Opportunities arise. Seek guidance from a wise person."
+        },
+        {
+          "line_number": 3,
+          "text": "All day long the superior man is creatively active. At nightfall his mind is still beset with cares. Danger. No blame.",
+          "interpretation": "Continuous effort and vigilance are required. Be aware of potential dangers."
+        },
+        {
+          "line_number": 4,
+          "text": "Wavering flight over the depths. No blame.",
+          "interpretation": "Navigating through uncertain situations requires balance and caution."
+        },
+        {
+          "line_number": 5,
+          "text": "Flying dragon in the heavens. It furthers one to see the great man.",
+          "interpretation": "Achievement and success. Seek the counsel of those with experience."
+        },
+        {
+          "line_number": 6,
+          "text": "Arrogant dragon will have cause to repent.",
+          "interpretation": "Overconfidence and arrogance lead to downfall. Remain humble."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Receptive",
+      "chinese_name": "坤 (Kūn)",
+      "representation": "000000",
+      "overall_meaning": "The essence of the receptive is devotion, the power to nurture, to support, to yield.",
+      "advice": "Be open and accepting. Yield to the natural order and remain adaptable.",
+      "keywords": ["receptivity", "nurturing", "support", "adaptability"],
+      "creative_description": "As the earth below, the receptive nature supports growth and provides a foundation for all things.",
+      "lines": [
+        {
+          "line_number": 1,
+          "text": "When there is hoarfrost underfoot, solid ice is not far off.",
+          "interpretation": "Early signs of change indicate that more significant transformations are coming."
+        },
+        {
+          "line_number": 2,
+          "text": "Straight, square, great. Without purpose, yet nothing remains unfurthered.",
+          "interpretation": "Maintain integrity and simplicity. Success will follow naturally."
+        },
+        {
+          "line_number": 3,
+          "text": "Hidden lines. One is able to remain persevering. If by chance you are in the service of a king, seek not works.",
+          "interpretation": "Remain steadfast and humble, avoiding the pursuit of recognition."
+        },
+        {
+          "line_number": 4,
+          "text": "A tied-up sack. No blame, no praise.",
+          "interpretation": "Neutral actions and decisions. Neither significant gains nor losses."
+        },
+        {
+          "line_number": 5,
+          "text": "A yellow lower garment brings supreme good fortune.",
+          "interpretation": "Humility and modesty bring great blessings and fortune."
+        },
+        {
+          "line_number": 6,
+          "text": "Dragons fight in the meadow. Their blood is black and yellow.",
+          "interpretation": "Conflict and opposition lead to harm and regret. Seek harmony."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Difficulty at the Beginning",
+      "chinese_name": "屯 (Zhūn)",
+      "representation": "100010",
+      "overall_meaning": "The beginning of any endeavor is marked by difficulty and struggle, but perseverance leads to success.",
+      "advice": "Be patient and persistent. Recognize the challenges as part of the growth process.",
+      "keywords": ["struggle", "beginning", "perseverance", "growth"],
+      "creative_description": "As sprouts breaking through the earth, initial struggles give way to growth and development.",
+      "lines": [
+        {
+          "line_number": 1,
+          "text": "Hesitation and hindrance. It furthers one to remain persevering. It furthers one to appoint helpers.",
+          "interpretation": "Initial obstacles require perseverance and seeking support from others."
+        },
+        {
+          "line_number": 2,
+          "text": "Difficulties pile up. Horse and wagon part. He is not a robber; he will woo at the right time. As one proceeds, it furthers one to be persevering.",
+          "interpretation": "Challenges and setbacks are natural. Patience and timing are key."
+        },
+        {
+          "line_number": 3,
+          "text": "Whoever hunts deer without the forester only loses his way in the forest. The superior man gives careful consideration to the commencement of action.",
+          "interpretation": "Guidance and preparation are essential to avoid missteps."
+        },
+        {
+          "line_number": 4,
+          "text": "Horse and wagon part. Strive for union. To go brings good fortune. Everything acts to further.",
+          "interpretation": "Seek unity and cooperation. Moving forward brings success."
+        },
+        {
+          "line_number": 5,
+          "text": "Difficulty in the midst of blessing. A little perseverance brings good fortune. Great perseverance brings misfortune.",
+          "interpretation": "Balance effort with wisdom. Overexertion can lead to negative outcomes."
+        },
+        {
+          "line_number": 6,
+          "text": "Horse and wagon part. Bloody tears flow.",
+          "interpretation": "Severe difficulties and separation lead to sorrow. Seek resolution."
+        }
+      ]
+    },
+    {
+        "id": 4,
+        "name": "Youthful Folly",
+        "chinese_name": "蒙 (Méng)",
+        "representation": "100011",
+        "overall_meaning": "Youthful folly represents the time of inexperience and ignorance, but also the potential for growth and learning.",
+        "advice": "Seek guidance and be open to instruction. Learn from mistakes and strive for improvement.",
+        "keywords": ["inexperience", "learning", "guidance", "growth"],
+        "creative_description": "As a young sprout struggling to break through the soil, youthful folly faces challenges but holds the promise of growth and wisdom.",
+        "lines": [
+        {
+            "line_number": 1,
+            "text": "To make a fool develop it furthers one to apply discipline. The fetters should be removed. To go on in this way brings humiliation.",
+            "interpretation": "Discipline is necessary for growth. Avoid stubbornness to prevent disgrace."
+        },
+        {
+            "line_number": 2,
+            "text": "To bear with fools in kindliness brings good fortune. To know how to take women brings good fortune. The son is capable of taking charge of the household.",
+            "interpretation": "Patience and kindness lead to success. Embrace responsibilities with wisdom."
+        },
+        {
+            "line_number": 3,
+            "text": "Take not a maiden who, when she sees a man of bronze, loses possession of herself. Nothing furthers.",
+            "interpretation": "Avoid hasty decisions and unreliable partners. Maintain self-control."
+        },
+        {
+            "line_number": 4,
+            "text": "Entangled folly brings humiliation.",
+            "interpretation": "Getting caught in foolishness leads to shame. Seek clarity and avoid confusion."
+        },
+        {
+            "line_number": 5,
+            "text": "Childlike folly brings good fortune.",
+            "interpretation": "Maintaining a humble and open attitude fosters learning and success."
+        },
+        {
+            "line_number": 6,
+            "text": "In punishing folly, it does not further one to commit transgressions. The only thing that furthers is to prevent transgressions.",
+            "interpretation": "Correction should focus on prevention and education, not punishment."
+        }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Waiting (Nourishment)",
+        "chinese_name": "需 (Xū)",
+        "representation": "110111",
+        "overall_meaning": "Waiting signifies the need for patience and the recognition that proper nourishment and timing are essential for success.",
+        "advice": "Be patient and prepare adequately. Trust that the right opportunities will come with time.",
+        "keywords": ["patience", "preparation", "timing", "trust"],
+        "creative_description": "As clouds gather before the rain, waiting signifies the need to prepare and trust in the natural timing of events.",
+        "lines": [
+        {
+            "line_number": 1,
+            "text": "Waiting in the meadow. It furthers one to abide in what endures. No blame.",
+            "interpretation": "Stay grounded and patient. Good fortune comes from stability."
+        },
+        {
+            "line_number": 2,
+            "text": "Waiting on the sand. There is some gossip. The end brings good fortune.",
+            "interpretation": "Patience amidst uncertainty brings eventual success despite initial difficulties."
+        },
+        {
+            "line_number": 3,
+            "text": "Waiting in the mud brings about the arrival of the enemy.",
+            "interpretation": "Neglecting preparation leads to challenges. Be proactive."
+        },
+        {
+            "line_number": 4,
+            "text": "Waiting in blood. Get out of the pit.",
+            "interpretation": "Dangerous situations require decisive action to avoid harm."
+        },
+        {
+            "line_number": 5,
+            "text": "Waiting with food and drink. Perseverance brings good fortune.",
+            "interpretation": "Adequate preparation and persistence ensure success."
+        },
+        {
+            "line_number": 6,
+            "text": "One falls into the pit. Three uninvited guests arrive. Honor them, and in the end, there will be good fortune.",
+            "interpretation": "Unexpected challenges bring valuable lessons and opportunities."
+        }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Conflict",
+        "chinese_name": "訟 (Sòng)",
+        "representation": "011110",
+        "overall_meaning": "Conflict indicates a period of disputes and disagreements that require careful handling and resolution.",
+        "advice": "Approach conflicts with caution and seek fair resolution. Avoid unnecessary confrontations.",
+        "keywords": ["disputes", "caution", "resolution", "fairness"],
+        "creative_description": "As a river overflows, conflict arises from opposing forces. Navigate disputes with wisdom to restore harmony.",
+        "lines": [
+        {
+            "line_number": 1,
+            "text": "If one does not perpetuate the affair, there is a little gossip. In the end, good fortune comes.",
+            "interpretation": "Avoid escalating conflicts. Remaining calm leads to favorable outcomes."
+        },
+        {
+            "line_number": 2,
+            "text": "One cannot engage in conflict; one returns home, gives way. The people of his town, three hundred households, remain free of guilt.",
+            "interpretation": "Yielding in disputes protects the community and prevents harm."
+        },
+        {
+            "line_number": 3,
+            "text": "To nourish oneself on ancient virtue induces perseverance. Danger. In the end, good fortune comes. If by chance you are in the service of a king, seek not works.",
+            "interpretation": "Rely on past wisdom and remain steadfast. Avoid seeking recognition during conflicts."
+        },
+        {
+            "line_number": 4,
+            "text": "One cannot engage in conflict; one turns back and submits to fate, changes one's attitude, and finds peace in perseverance. Good fortune.",
+            "interpretation": "Accepting circumstances and maintaining peace leads to positive outcomes."
+        },
+        {
+            "line_number": 5,
+            "text": "To contend before him brings supreme good fortune.",
+            "interpretation": "Engaging in conflict with the right attitude and fairness brings success."
+        },
+        {
+            "line_number": 6,
+            "text": "Even if by chance a leather belt is bestowed on one, by the end of a morning it will have been snatched away three times.",
+            "interpretation": "Material gains from conflicts are temporary and unreliable. Focus on lasting solutions."
+        }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "The Army",
+        "chinese_name": "師 (Shī)",
+        "representation": "010001",
+        "overall_meaning": "The Army signifies discipline, leadership, and the need for strategic planning and organization.",
+        "advice": "Lead with integrity and discipline. Proper organization and strategy ensure success.",
+        "keywords": ["discipline", "leadership", "strategy", "organization"],
+        "creative_description": "As a well-organized army, discipline and strategic planning lead to successful outcomes.",
+        "lines": [
+        {
+            "line_number": 1,
+            "text": "An army must set forth in proper order. If the order is not good, misfortune threatens.",
+            "interpretation": "Organization and discipline are crucial. Disarray leads to failure."
+        },
+        {
+            "line_number": 2,
+            "text": "In the midst of the army. Good fortune. No blame. The king bestows a triple decoration.",
+            "interpretation": "Maintaining integrity within the group brings rewards and success."
+        },
+        {
+            "line_number": 3,
+            "text": "Perchance the army carries corpses in the wagon. Misfortune.",
+            "interpretation": "Carrying past burdens hinders progress. Let go of what no longer serves."
+        },
+        {
+            "line_number": 4,
+            "text": "The army retreats. No blame.",
+            "interpretation": "Strategic withdrawal can be wise. Avoid unnecessary confrontation."
+        },
+        {
+            "line_number": 5,
+            "text": "There is game in the field. It furthers one to catch it. No blame. The elder son leads the army. The younger transports corpses; then perseverance brings misfortune.",
+            "interpretation": "Focus on current opportunities. Mismanagement leads to failure."
+        },
+        {
+            "line_number": 6,
+            "text": "The great prince issues commands, founds states, vests families with fiefs. Inferior people should not be employed.",
+            "interpretation": "Wise leadership and delegation ensure stability and growth."
+        }
+        ]
+    },
+        {
+          "id": 8,
+          "name": "Holding Together (Union)",
+          "chinese_name": "比 (Bǐ)",
+          "representation": "010011",
+          "overall_meaning": "Holding Together signifies unity and cooperation, emphasizing the importance of mutual support and collective effort.",
+          "advice": "Seek unity and harmony in relationships. Collaborate and support each other to achieve common goals.",
+          "keywords": ["unity", "cooperation", "support", "collective effort"],
+          "creative_description": "As rivers converge to form a mighty ocean, unity and cooperation amplify strength and potential.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Hold to him in truth and loyalty; this is without blame. Truth, like a full earthen bowl: Thus in the end good fortune comes from without.",
+              "interpretation": "Honesty and loyalty in relationships bring lasting benefits and external rewards."
+            },
+            {
+              "line_number": 2,
+              "text": "Hold to him inwardly. Perseverance brings good fortune.",
+              "interpretation": "Inner commitment and perseverance in unity lead to positive outcomes."
+            },
+            {
+              "line_number": 3,
+              "text": "You hold together with the wrong people.",
+              "interpretation": "Be cautious about alliances. Associating with the wrong people can lead to trouble."
+            },
+            {
+              "line_number": 4,
+              "text": "Hold to him outwardly also. No blame.",
+              "interpretation": "External expressions of unity and support are as important as internal commitments."
+            },
+            {
+              "line_number": 5,
+              "text": "Manifestation of holding together. In the hunt, the king uses beaters on three sides only and foregoes game that runs off in front. The citizens need no warning. Good fortune.",
+              "interpretation": "Wisely guided cooperation and voluntary participation bring success."
+            },
+            {
+              "line_number": 6,
+              "text": "He finds no head for holding together. Misfortune.",
+              "interpretation": "Lack of leadership or clear direction leads to disunity and misfortune."
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "The Taming Power of the Small",
+          "chinese_name": "小畜 (Xiǎo Chù)",
+          "representation": "110010",
+          "overall_meaning": "The Taming Power of the Small emphasizes restraint, patience, and the gradual accumulation of resources and strength.",
+          "advice": "Exercise patience and restraint. Focus on small, incremental gains and build up resources steadily.",
+          "keywords": ["restraint", "patience", "gradual progress", "accumulation"],
+          "creative_description": "Like a gentle breeze gradually shaping the landscape, small but consistent efforts lead to significant change over time.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Return to the way. How could there be blame in this? Good fortune.",
+              "interpretation": "Returning to the right path brings good fortune. Stay true to your principles."
+            },
+            {
+              "line_number": 2,
+              "text": "He allows himself to be drawn into returning. Good fortune.",
+              "interpretation": "Being receptive and adaptable leads to positive outcomes."
+            },
+            {
+              "line_number": 3,
+              "text": "The spokes burst out of the wagon wheels. Man and wife roll their eyes.",
+              "interpretation": "Tensions and misunderstandings disrupt harmony. Avoid confrontations."
+            },
+            {
+              "line_number": 4,
+              "text": "If you are sincere, blood vanishes and fear gives way. No blame.",
+              "interpretation": "Sincerity and honesty dispel fear and conflict. Maintain integrity."
+            },
+            {
+              "line_number": 5,
+              "text": "If you are sincere and loyally attached, you are richly rewarded. All is well.",
+              "interpretation": "Loyalty and sincerity in relationships bring rich rewards and well-being."
+            },
+            {
+              "line_number": 6,
+              "text": "The rain comes, there is rest. This is due to the lasting effect of character. Perseverance brings the woman into danger. The moon is nearly full. If the superior man persists, misfortune comes.",
+              "interpretation": "Recognize when to rest and when to act. Overextending can lead to danger."
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "Treading (Conduct)",
+          "chinese_name": "履 (Lǚ)",
+          "representation": "011010",
+          "overall_meaning": "Treading signifies cautious and correct behavior, emphasizing the importance of maintaining proper conduct and awareness.",
+          "advice": "Tread carefully and maintain proper conduct. Be mindful of your actions and their impact.",
+          "keywords": ["caution", "proper conduct", "awareness", "mindfulness"],
+          "creative_description": "Like walking on a tiger's tail, proper conduct and awareness prevent missteps and ensure safety.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Simple conduct. Progress without blame.",
+              "interpretation": "Simplicity and straightforward actions lead to progress without complications."
+            },
+            {
+              "line_number": 2,
+              "text": "Treading a smooth, level course. The perseverance of a dark man brings good fortune.",
+              "interpretation": "Steady and consistent effort leads to success. Perseverance is key."
+            },
+            {
+              "line_number": 3,
+              "text": "A one-eyed man is able to see, a lame man is able to tread. He treads on the tail of the tiger. The tiger bites the man. Misfortune. Thus a warrior acts on behalf of his great prince.",
+              "interpretation": "Taking risks without proper preparation leads to misfortune. Act wisely."
+            },
+            {
+              "line_number": 4,
+              "text": "He treads on the tail of the tiger. Caution and circumspection lead ultimately to good fortune.",
+              "interpretation": "Careful and cautious actions lead to positive outcomes, even in risky situations."
+            },
+            {
+              "line_number": 5,
+              "text": "Resolute conduct. Perseverance with awareness of danger.",
+              "interpretation": "Determined and mindful perseverance ensures success despite dangers."
+            },
+            {
+              "line_number": 6,
+              "text": "Look to your conduct and weigh the favorable signs. When everything is fulfilled, supreme good fortune comes.",
+              "interpretation": "Reflect on your actions and their results. Fulfillment and supreme good fortune follow."
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "Peace",
+          "chinese_name": "泰 (Tài)",
+          "representation": "111000",
+          "overall_meaning": "Peace signifies harmony, prosperity, and the natural order. It represents a time of balance and flourishing.",
+          "advice": "Embrace harmony and balance. Foster peace and prosperity in your environment.",
+          "keywords": ["harmony", "prosperity", "balance", "flourishing"],
+          "creative_description": "As heaven and earth unite, peace brings forth a time of flourishing and natural order.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "When ribbon grass is pulled up, the sod comes with it. Each according to his kind. Undertakings bring good fortune.",
+              "interpretation": "Actions have far-reaching effects. Unified efforts lead to success."
+            },
+            {
+              "line_number": 2,
+              "text": "Bearing with the uncultured in gentleness, forgoing evil and strength. Good fortune.",
+              "interpretation": "Gentleness and tolerance bring good fortune. Forgo harshness and embrace kindness."
+            },
+            {
+              "line_number": 3,
+              "text": "No plain not followed by a slope. No going not followed by a return. He who remains persevering in danger is without blame. Do not complain about this truth; enjoy the good fortune you still possess.",
+              "interpretation": "Understand the cyclical nature of life. Persevere through dangers and appreciate existing good fortune."
+            },
+            {
+              "line_number": 4,
+              "text": "He flutters down, not boasting of his wealth, together with his neighbor, guileless and sincere.",
+              "interpretation": "Humility and sincerity in relationships bring harmony and mutual prosperity."
+            },
+            {
+              "line_number": 5,
+              "text": "The sovereign I gives his daughter in marriage. This brings blessing and supreme good fortune.",
+              "interpretation": "Generosity and fostering alliances lead to supreme good fortune and blessings."
+            },
+            {
+              "line_number": 6,
+              "text": "The wall falls back into the moat. Use no army now. Make your commands known within your own town. Perseverance brings humiliation.",
+              "interpretation": "Internal issues require internal solutions. Avoid external force and maintain integrity."
+            }
+          ]
+        },
+        {
+            "id": 12,
+            "name": "Standstill (Stagnation)",
+            "chinese_name": "否 (Pǐ)",
+            "representation": "000111",
+            "overall_meaning": "Standstill signifies a period of stagnation and obstruction, where progress is halted and difficulties prevail.",
+            "advice": "Remain patient and avoid forcing progress. Use this time for reflection and preparation for future actions.",
+            "keywords": ["stagnation", "obstruction", "patience", "preparation"],
+            "creative_description": "As heaven and earth are out of harmony, stagnation sets in, halting progress and creating obstacles.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Pushing upward out of the darkness and in harmony with the light. This means great good fortune.",
+                "interpretation": "Even in difficult times, strive to align with positive influences and make gradual progress."
+              },
+              {
+                "line_number": 2,
+                "text": "They bear and endure; this means good fortune for inferior people. The standstill serves to perfect the great man.",
+                "interpretation": "Patience and endurance during stagnation foster growth and development."
+              },
+              {
+                "line_number": 3,
+                "text": "They bear shame.",
+                "interpretation": "Acknowledging and learning from failures or missteps is crucial during periods of standstill."
+              },
+              {
+                "line_number": 4,
+                "text": "They climb the heights and hide their chariots. No blame.",
+                "interpretation": "Retreating and conserving resources during difficulties prevents further harm."
+              },
+              {
+                "line_number": 5,
+                "text": "Standstill comes and goes. This is how heaven and earth act together. Good fortune for the great man.",
+                "interpretation": "Understanding that stagnation is a natural phase helps in navigating through it wisely."
+              },
+              {
+                "line_number": 6,
+                "text": "The standstill comes to an end. First standstill, then good fortune.",
+                "interpretation": "After a period of stagnation, positive change will eventually come. Patience leads to good fortune."
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "name": "Fellowship with Men",
+            "chinese_name": "同人 (Tóng Rén)",
+            "representation": "111010",
+            "overall_meaning": "Fellowship with Men emphasizes the importance of unity, collaboration, and harmonious relationships.",
+            "advice": "Seek unity and cooperation with others. Foster harmonious relationships for collective success.",
+            "keywords": ["unity", "collaboration", "harmony", "relationships"],
+            "creative_description": "As fire ascends into the sky, fellowship and unity among people create a strong and harmonious community.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Fellowship with men at the gate. No blame.",
+                "interpretation": "Initiating relationships and seeking common ground with others brings no harm."
+              },
+              {
+                "line_number": 2,
+                "text": "Fellowship with men in the clan. Humiliation.",
+                "interpretation": "Favoring close associations over broader relationships may lead to partiality and conflict."
+              },
+              {
+                "line_number": 3,
+                "text": "He hides weapons in the thicket; he climbs the high hill in front of it. For three years, he does not rise.",
+                "interpretation": "Caution and preparation are necessary to avoid conflicts and misunderstandings."
+              },
+              {
+                "line_number": 4,
+                "text": "He climbs up on his wall; he cannot attack. Good fortune.",
+                "interpretation": "Taking a higher perspective and avoiding unnecessary confrontations lead to good outcomes."
+              },
+              {
+                "line_number": 5,
+                "text": "Men bound in fellowship first weep and lament, but afterward they laugh. After great struggles, they succeed.",
+                "interpretation": "Unity and collaboration, even through hardships, ultimately lead to joy and success."
+              },
+              {
+                "line_number": 6,
+                "text": "Fellowship with men in the meadow. No remorse.",
+                "interpretation": "Joining forces with like-minded individuals in a peaceful environment brings satisfaction."
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "name": "Possession in Great Measure",
+            "chinese_name": "大有 (Dà Yǒu)",
+            "representation": "111100",
+            "overall_meaning": "Possession in Great Measure signifies abundance, prosperity, and the responsible management of resources.",
+            "advice": "Manage resources wisely and share prosperity with others. Responsible stewardship ensures lasting success.",
+            "keywords": ["abundance", "prosperity", "management", "stewardship"],
+            "creative_description": "As the sun shines brightly at its zenith, great abundance and prosperity are achieved through wise management and generosity.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "No relationship with what is harmful; there is no blame in this. If one remains conscious of difficulty, one remains without blame.",
+                "interpretation": "Avoid harmful associations and remain vigilant to ensure continued success."
+              },
+              {
+                "line_number": 2,
+                "text": "A big wagon for loading. One may undertake something. No blame.",
+                "interpretation": "Preparedness and capability allow for successful undertakings without fault."
+              },
+              {
+                "line_number": 3,
+                "text": "A prince offers it to the Son of Heaven. A petty man cannot do this.",
+                "interpretation": "Generosity and noble actions are required for greatness, beyond the capacity of petty individuals."
+              },
+              {
+                "line_number": 4,
+                "text": "He makes a difference between himself and his neighbor. No blame.",
+                "interpretation": "Distinguishing oneself from others through virtuous actions brings no harm."
+              },
+              {
+                "line_number": 5,
+                "text": "He who is blessed by heaven brings good fortune. Nothing that does not further.",
+                "interpretation": "Those favored by fortune achieve success in all endeavors."
+              },
+              {
+                "line_number": 6,
+                "text": "He is modest and unassuming in virtue. A great river. Good fortune.",
+                "interpretation": "Modesty and humility in abundance lead to lasting good fortune."
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "name": "Modesty",
+            "chinese_name": "謙 (Qiān)",
+            "representation": "010001",
+            "overall_meaning": "Modesty represents humility and the strength that comes from recognizing and embracing one's limitations.",
+            "advice": "Practice humility and modesty in all actions. Recognize your limitations and seek continuous improvement.",
+            "keywords": ["humility", "strength", "limitations", "improvement"],
+            "creative_description": "As mountains rise from the earth, modesty elevates one’s character, allowing for growth and strength.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Modesty creates success. The superior person carries things through.",
+                "interpretation": "Humility leads to success, and the wise person completes tasks with modesty."
+              },
+              {
+                "line_number": 2,
+                "text": "Modesty that comes to expression. Perseverance brings good fortune.",
+                "interpretation": "Expressing humility through consistent actions leads to good fortune."
+              },
+              {
+                "line_number": 3,
+                "text": "A superior person of modesty and merit carries things to conclusion. Good fortune.",
+                "interpretation": "Modesty combined with merit ensures successful outcomes."
+              },
+              {
+                "line_number": 4,
+                "text": "Nothing that would not further modesty in movement.",
+                "interpretation": "All actions should be guided by humility for positive results."
+              },
+              {
+                "line_number": 5,
+                "text": "No boasting of wealth before one's neighbor. It is favorable to attack with force. Nothing that would not further.",
+                "interpretation": "Avoiding arrogance and maintaining modesty in all actions ensures favorable outcomes."
+              },
+              {
+                "line_number": 6,
+                "text": "Modesty that comes to expression. It is favorable to set armies marching to chastise one's own city and one's country.",
+                "interpretation": "Expressing humility while addressing internal issues leads to harmony and order."
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "name": "Enthusiasm",
+            "chinese_name": "豫 (Yù)",
+            "representation": "100100",
+            "overall_meaning": "Enthusiasm signifies a time of excitement and energy, driving progress and the pursuit of goals.",
+            "advice": "Harness your enthusiasm to drive progress, but remain grounded and aware of your surroundings.",
+            "keywords": ["excitement", "energy", "progress", "pursuit"],
+            "creative_description": "Like thunder and lightning, enthusiasm brings a surge of energy and excitement, propelling forward momentum.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Enthusiasm that expresses itself brings misfortune.",
+                "interpretation": "Excessive excitement can lead to recklessness. Stay balanced."
+              },
+              {
+                "line_number": 2,
+                "text": "Firm as a rock. Not a whole day. Perseverance brings good fortune.",
+                "interpretation": "Steadfastness and perseverance through short-term challenges lead to success."
+              },
+              {
+                "line_number": 3,
+                "text": "Enthusiasm that looks upward creates remorse. Hesitation brings remorse.",
+                "interpretation": "Aimless excitement and indecision lead to regret. Focus your energy wisely."
+              },
+              {
+                "line_number": 4,
+                "text": "The source of enthusiasm. He achieves great things. Doubt not. You gather friends around you as a hair clasp gathers the hair.",
+                "interpretation": "Centered enthusiasm attracts support and leads to great achievements."
+              },
+              {
+                "line_number": 5,
+                "text": "Persistently ill, and still does not die.",
+                "interpretation": "Endurance and resilience in the face of prolonged challenges ensure survival."
+              },
+              {
+                "line_number": 6,
+                "text": "Deluded enthusiasm. But if after completion one changes, there is no blame.",
+                "interpretation": "Correct misguided excitement through reflection and adaptation."
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "name": "Following",
+            "chinese_name": "隨 (Suí)",
+            "representation": "011100",
+            "overall_meaning": "Following signifies the importance of adaptability and responsiveness to circumstances and guidance.",
+            "advice": "Be adaptable and responsive. Follow wise guidance and be open to change.",
+            "keywords": ["adaptability", "responsiveness", "guidance", "change"],
+            "creative_description": "As the wind follows the path of the sky, following emphasizes the importance of adaptability and responsiveness to the environment.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "The standard is changing. Perseverance brings good fortune. To go out of the door in company produces deeds.",
+                "interpretation": "Adaptability and collaboration in changing circumstances lead to successful outcomes."
+              },
+              {
+                "line_number": 2,
+                "text": "If one clings to the little boy, one loses the strong man.",
+                "interpretation": "Clinging to immature ideas or behaviors prevents growth and success."
+              },
+              {
+                "line_number": 3,
+                "text": "Following creates success. Perseverance brings misfortune. To go one's way with sincerity brings clarity. How could there be blame in this?",
+                "interpretation": "True following requires sincerity and clarity. Persevere with integrity to avoid misfortune."
+              },
+              {
+                "line_number": 4,
+                "text": "Following creates success. No blame.",
+                "interpretation": "Following wise guidance and adapting to circumstances lead to success without fault."
+              },
+              {
+                "line_number": 5,
+                "text": "Sincere in the good. Good fortune.",
+                "interpretation": "Genuine adherence to positive principles brings good fortune."
+              },
+              {
+                "line_number": 6,
+                "text": "He meets with firm allegiance and is still further bound. The king introduces him to the Western Mountain.",
+                "interpretation": "Strong loyalty and commitment to a higher purpose are rewarded with honor and recognition."
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "name": "Work on the Decayed",
+            "chinese_name": "蠱 (Gǔ)",
+            "representation": "100011",
+            "overall_meaning": "Work on the Decayed signifies the need to address decay and corruption, restoring order and integrity.",
+            "advice": "Address decay and corruption directly. Restore order and integrity through diligent effort.",
+            "keywords": ["restoration", "integrity", "effort", "order"],
+            "creative_description": "As the wind sweeps away decay, diligent effort is required to restore order and integrity.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Setting right what has been spoiled by the father. If there is a son, no blame rests upon the departed father. Danger. In the end, good fortune.",
+                "interpretation": "Correcting past mistakes with responsibility ensures eventual good fortune."
+              },
+              {
+                "line_number": 2,
+                "text": "Setting right what has been spoiled by the mother. One must not be too persevering.",
+                "interpretation": "Gentle correction of past errors brings positive change without harshness."
+              },
+              {
+                "line_number": 3,
+                "text": "Setting right what has been spoiled by the father. There will be a little remorse. No great blame.",
+                "interpretation": "Acknowledging and rectifying inherited flaws brings minor regrets but no major faults."
+              },
+              {
+                "line_number": 4,
+                "text": "Tolerating what has been spoiled by the father. In continuing, no blame.",
+                "interpretation": "Enduring past errors with patience and persistence avoids blame."
+              },
+              {
+                "line_number": 5,
+                "text": "Setting right what has been spoiled by the father. One meets with praise.",
+                "interpretation": "Correcting inherited mistakes is praiseworthy and brings respect."
+              },
+              {
+                "line_number": 6,
+                "text": "He does not serve kings and princes, sets higher goals himself.",
+                "interpretation": "Focusing on higher principles and self-improvement rather than seeking external approval."
+              }
+            ]
+        },          
+          {
+            "id": 19,
+            "name": "Approach",
+            "chinese_name": "臨 (Lín)",
+            "representation": "011110",
+            "overall_meaning": "Approach signifies a time of coming together and mutual influence, bringing about new opportunities and growth.",
+            "advice": "Welcome new opportunities and relationships. Mutual influence leads to growth and success.",
+            "keywords": ["opportunities", "relationships", "growth", "mutual influence"],
+            "creative_description": "As the earth rises to meet the heavens, approach emphasizes the power of mutual influence and the creation of new opportunities.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Joint approach. Perseverance brings good fortune.",
+                "interpretation": "Collaborative efforts and perseverance lead to successful outcomes."
+              },
+              {
+                "line_number": 2,
+                "text": "Joint approach. Good fortune. Everything acts to further.",
+                "interpretation": "Working together harmoniously brings good fortune and progress."
+              },
+              {
+                "line_number": 3,
+                "text": "Comfortable approach. Nothing that would further. If one is induced to grieve over it, one becomes free of blame.",
+                "interpretation": "Being at ease with approaching opportunities. Avoid complacency to remain blameless."
+              },
+              {
+                "line_number": 4,
+                "text": "Complete approach. No blame.",
+                "interpretation": "Wholehearted acceptance and engagement with opportunities lead to blameless success."
+              },
+              {
+                "line_number": 5,
+                "text": "Wise approach. This is right for a great prince. Good fortune.",
+                "interpretation": "Approaching situations with wisdom and discernment leads to success."
+              },
+              {
+                "line_number": 6,
+                "text": "Approach with sincerity and kindness. Good fortune.",
+                "interpretation": "Sincere and kind interactions in new opportunities bring good fortune."
+              }
+            ]
+          },
+          {
+            "id": 20,
+            "name": "Contemplation (View)",
+            "chinese_name": "觀 (Guān)",
+            "representation": "011000",
+            "overall_meaning": "Contemplation signifies a time of observation and reflection, emphasizing the importance of gaining insight and understanding.",
+            "advice": "Take time to observe and reflect. Understanding comes from careful contemplation.",
+            "keywords": ["observation", "reflection", "insight", "understanding"],
+            "creative_description": "As the wind moves over the earth, contemplation involves observing the world carefully to gain deeper insights.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Boy-like contemplation. For an inferior man, no blame. For a superior man, humiliation.",
+                "interpretation": "Naive or shallow observation is acceptable for the inexperienced but is shameful for those who should know better."
+              },
+              {
+                "line_number": 2,
+                "text": "Contemplation through the crack of the door. Furthering for the perseverance of a woman.",
+                "interpretation": "Limited perspective can still be beneficial if one remains patient and persistent."
+              },
+              {
+                "line_number": 3,
+                "text": "Contemplation of my life decides the choice between advance and retreat.",
+                "interpretation": "Self-reflection guides decisions on whether to move forward or withdraw."
+              },
+              {
+                "line_number": 4,
+                "text": "Contemplation of the light of the kingdom. It furthers one to exert influence as the guest of a king.",
+                "interpretation": "Understanding the broader situation enables one to exert a positive influence."
+              },
+              {
+                "line_number": 5,
+                "text": "Contemplation of my life. The superior man is without blame.",
+                "interpretation": "Deep self-reflection leads to a blameless and wise life."
+              },
+              {
+                "line_number": 6,
+                "text": "Contemplation of his life. The superior man is without blame.",
+                "interpretation": "Persistent self-reflection and awareness ensure a life free from blame."
+              }
+            ]
+          },                
+          {
+            "id": 21,
+            "name": "Biting Through",
+            "chinese_name": "噬嗑 (Shì Kè)",
+            "representation": "100101",
+            "overall_meaning": "Biting Through signifies the necessity of decisive action to overcome obstacles and resolve conflicts.",
+            "advice": "Take decisive action to overcome obstacles. Address conflicts directly to resolve them.",
+            "keywords": ["decisive action", "overcoming obstacles", "resolution", "conflict"],
+            "creative_description": "As a powerful force bites through tough material, decisive actions break through obstacles and resolve conflicts.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "His feet are fastened in the stocks, so that his toes disappear. No blame.",
+                "interpretation": "Initial restraint is necessary. Endure minor constraints to avoid greater harm."
+              },
+              {
+                "line_number": 2,
+                "text": "Bites through tender meat, so that his nose disappears. No blame.",
+                "interpretation": "Acting decisively and firmly, even if it causes some discomfort, is necessary for resolution."
+              },
+              {
+                "line_number": 3,
+                "text": "Bites on old dried meat and strikes on something poisonous. Slight humiliation. No blame.",
+                "interpretation": "Facing tough challenges and unpleasant truths may cause discomfort, but it is necessary."
+              },
+              {
+                "line_number": 4,
+                "text": "Bites on dried gristly meat. Receives metal arrows. It furthers one to be mindful of difficulties and be persevering. Good fortune.",
+                "interpretation": "Persevere through tough challenges. Awareness and persistence lead to success."
+              },
+              {
+                "line_number": 5,
+                "text": "Bites on dried lean meat. Receives yellow gold. Perseveringly aware of danger. No blame.",
+                "interpretation": "Endure and remain vigilant in difficult situations. Reward comes with caution and persistence."
+              },
+              {
+                "line_number": 6,
+                "text": "His neck is fastened in the wooden cangue, so that his ears disappear. Misfortune.",
+                "interpretation": "Excessive restraint and lack of freedom lead to severe consequences and misfortune."
+              }
+            ]
+          },        
+          {
+            "id": 22,
+            "name": "Grace",
+            "chinese_name": "賁 (Bì)",
+            "representation": "100011",
+            "overall_meaning": "Grace signifies beauty and elegance, emphasizing the importance of harmonious and aesthetically pleasing actions.",
+            "advice": "Act with grace and elegance. Seek harmony and beauty in your actions and surroundings.",
+            "keywords": ["beauty", "elegance", "harmony", "aesthetics"],
+            "creative_description": "As the mountain displays its graceful form, grace involves creating harmony and beauty in all actions.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "He lends grace to his toes, leaves the carriage, and walks.",
+                "interpretation": "Simplify and approach tasks with elegance and humility."
+              },
+              {
+                "line_number": 2,
+                "text": "Lends grace to the beard on his chin.",
+                "interpretation": "Small acts of grace and refinement enhance overall dignity."
+              },
+              {
+                "line_number": 3,
+                "text": "Graceful and moist. Constant perseverance brings good fortune.",
+                "interpretation": "Consistent grace and refinement in actions lead to lasting success."
+              },
+              {
+                "line_number": 4,
+                "text": "Grace or simplicity? A white horse comes as if on wings. He is not a robber; he will woo at the right time.",
+                "interpretation": "Choose simplicity over excessive refinement. Timing and sincerity matter."
+              },
+              {
+                "line_number": 5,
+                "text": "Grace in hills and gardens. The roll of silk is meager and small. Humiliation, but in the end, good fortune.",
+                "interpretation": "Moderation and humility in the pursuit of beauty lead to eventual success."
+              },
+              {
+                "line_number": 6,
+                "text": "Simple grace. No blame.",
+                "interpretation": "Simplicity and natural grace in actions bring no fault."
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "name": "Splitting Apart",
+            "chinese_name": "剝 (Bō)",
+            "representation": "111000",
+            "overall_meaning": "Splitting Apart signifies a period of decay and disintegration, where separation and decline are inevitable.",
+            "advice": "Accept the process of disintegration and prepare for renewal. Let go of what no longer serves you.",
+            "keywords": ["decay", "disintegration", "separation", "renewal"],
+            "creative_description": "As the mountain crumbles into the earth, splitting apart signifies the natural process of decay and the opportunity for renewal.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "The leg of the bed is split. Those who persevere are destroyed. Misfortune.",
+                "interpretation": "Clinging to what is decaying leads to destruction. Let go of what no longer serves."
+              },
+              {
+                "line_number": 2,
+                "text": "The bed is split at the edge. Those who persevere are destroyed. Misfortune.",
+                "interpretation": "Partial decay is a warning. Continued attachment leads to greater loss."
+              },
+              {
+                "line_number": 3,
+                "text": "He splits with them. No blame.",
+                "interpretation": "Separation from what is decaying is necessary and blameless."
+              },
+              {
+                "line_number": 4,
+                "text": "The bed is split up to the skin. Misfortune.",
+                "interpretation": "Ignoring decay until it affects the core leads to severe consequences."
+              },
+              {
+                "line_number": 5,
+                "text": "A shoal of fishes. Favor comes through the court ladies. Everything acts to further.",
+                "interpretation": "Support and assistance from allies lead to favorable outcomes."
+              },
+              {
+                "line_number": 6,
+                "text": "There is a large fruit still uneaten. The superior man receives a carriage. The house of the inferior man is split apart.",
+                "interpretation": "Holding on to valuable resources leads to recognition and reward, while neglect leads to downfall."
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "name": "Return (The Turning Point)",
+            "chinese_name": "復 (Fù)",
+            "representation": "000100",
+            "overall_meaning": "Return signifies a time of renewal and revival, where the old gives way to the new, and the cycle of life continues.",
+            "advice": "Embrace renewal and new beginnings. Trust in the natural cycles of life.",
+            "keywords": ["renewal", "revival", "new beginnings", "cycles"],
+            "creative_description": "As the winter solstice marks the return of light, return signifies the turning point towards renewal and revival.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Return from a short distance. No need for remorse. Great good fortune.",
+                "interpretation": "Small corrections and adjustments lead to great fortune."
+              },
+              {
+                "line_number": 2,
+                "text": "Return from a distance. It furthers one to have something to say.",
+                "interpretation": "Expressing one's thoughts and intentions aids in the process of renewal."
+              },
+              {
+                "line_number": 3,
+                "text": "Repeated return. Danger. No blame.",
+                "interpretation": "Frequent reversals indicate instability, but no blame if recognized and addressed."
+              },
+              {
+                "line_number": 4,
+                "text": "Walking in the midst of others, one returns alone.",
+                "interpretation": "Individual paths and decisions are necessary for true renewal."
+              },
+              {
+                "line_number": 5,
+                "text": "Noble-hearted return. No remorse.",
+                "interpretation": "A sincere and noble approach to renewal brings peace and eliminates regret."
+              },
+              {
+                "line_number": 6,
+                "text": "Missing the return. Misfortune. Misfortune from within and without. If armies are set marching in this way, one will suffer a great defeat, disastrous for the ruler of the country. For ten years it will not be possible to attack again.",
+                "interpretation": "Ignoring the opportunity for renewal leads to misfortune and long-term setbacks."
+              }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Innocence (The Unexpected)",
+            "chinese_name": "無妄 (Wú Wàng)",
+            "representation": "111001",
+            "overall_meaning": "Innocence signifies a state of natural and spontaneous action that is free from ulterior motives, resulting in harmony with the natural order.",
+            "advice": "Act with sincerity and purity of intention. Trust in the natural flow and avoid overthinking.",
+            "keywords": ["innocence", "spontaneity", "sincerity", "natural order"],
+            "creative_description": "Like the purity of a clear sky, innocence and sincerity align one's actions with the natural order, bringing unexpected good fortune.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Innocent behavior brings good fortune.",
+                "interpretation": "Acting with purity and sincerity leads to positive outcomes."
+              },
+              {
+                "line_number": 2,
+                "text": "If one does not count on the harvest while plowing, nor on the use of the ground while clearing it, it furthers one to undertake something.",
+                "interpretation": "Focus on the present effort rather than the results, and success will follow naturally."
+              },
+              {
+                "line_number": 3,
+                "text": "Undeserved misfortune. The cow that was tethered by someone is the wanderer's gain, the citizen's loss.",
+                "interpretation": "Misfortune may arise from external factors, but it can lead to unexpected benefits."
+              },
+              {
+                "line_number": 4,
+                "text": "He who can be persevering remains without blame.",
+                "interpretation": "Consistency and perseverance in one's actions maintain one's integrity."
+              },
+              {
+                "line_number": 5,
+                "text": "Use no medicine in an illness that is incurable. It furthers one to be persevering.",
+                "interpretation": "Incurable situations should be accepted. Perseverance in such times is beneficial."
+              },
+              {
+                "line_number": 6,
+                "text": "Innocent action brings misfortune. Nothing furthers.",
+                "interpretation": "Actions lacking in forethought and awareness can lead to misfortune. Be mindful."
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "name": "The Taming Power of the Great",
+            "chinese_name": "大畜 (Dà Chù)",
+            "representation": "111100",
+            "overall_meaning": "The Taming Power of the Great signifies the accumulation of inner strength and wisdom, and the ability to overcome obstacles through patience and perseverance.",
+            "advice": "Cultivate inner strength and patience. Use accumulated wisdom to navigate obstacles and challenges.",
+            "keywords": ["inner strength", "patience", "wisdom", "perseverance"],
+            "creative_description": "Like a mountain that holds firm, the taming power of the great emphasizes inner strength and perseverance to overcome challenges.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Danger is at hand. It furthers one to desist.",
+                "interpretation": "Recognize potential danger and avoid unnecessary risks. Pause and reassess."
+              },
+              {
+                "line_number": 2,
+                "text": "The axletrees are taken from the wagon.",
+                "interpretation": "Remove key components to prevent movement and avoid danger. Pause action temporarily."
+              },
+              {
+                "line_number": 3,
+                "text": "A good horse that follows others. Awareness of danger, with perseverance, brings good fortune.",
+                "interpretation": "Follow wise guidance and remain alert. Perseverance leads to positive outcomes."
+              },
+              {
+                "line_number": 4,
+                "text": "The headboard of a young bull. Great good fortune.",
+                "interpretation": "Guidance and control lead to successful development and great fortune."
+              },
+              {
+                "line_number": 5,
+                "text": "The tusk of a gelded boar. Good fortune.",
+                "interpretation": "Strength and power, when properly channeled, bring good fortune."
+              },
+              {
+                "line_number": 6,
+                "text": "One attains the way of heaven. Success.",
+                "interpretation": "Aligning with higher principles and wisdom ensures success."
+              }
+            ]
+        }, 
+        {
+            "id": 27,
+            "name": "The Corners of the Mouth (Providing Nourishment)",
+            "chinese_name": "頤 (Yí)",
+            "representation": "100100",
+            "overall_meaning": "The Corners of the Mouth signifies the importance of proper nourishment and care, both physically and spiritually. It emphasizes the need to be mindful of what we take in and how we sustain ourselves.",
+            "advice": "Pay attention to both physical and spiritual nourishment. Be mindful of what you consume and how it affects your well-being.",
+            "keywords": ["nourishment", "care", "mindfulness", "well-being"],
+            "creative_description": "As the corners of the mouth guide nourishment into the body, this hexagram highlights the importance of mindful intake and sustenance.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "You let your magic tortoise go, and look at me with the corners of your mouth drooping. Misfortune.",
+                "interpretation": "Neglecting one's own resources and relying on others leads to misfortune. Take responsibility for your own nourishment."
+              },
+              {
+                "line_number": 2,
+                "text": "Turning to the summit for nourishment, deviating from the path to seek nourishment from the hill. Continuing this way brings good fortune.",
+                "interpretation": "Seeking nourishment from higher and better sources leads to good fortune. Aim high and stay on the right path."
+              },
+              {
+                "line_number": 3,
+                "text": "Turning away from nourishment. Perseverance brings misfortune. Do not act in this way for ten years. Nothing serves to further.",
+                "interpretation": "Ignoring proper nourishment and care leads to long-term misfortune. Be consistent in maintaining your well-being."
+              },
+              {
+                "line_number": 4,
+                "text": "Turning to the summit for provision of nourishment brings good fortune. Spying about with sharp eyes like a tiger with insatiable craving. No blame.",
+                "interpretation": "Seeking the best nourishment and being vigilant brings good fortune. Stay alert and focused."
+              },
+              {
+                "line_number": 5,
+                "text": "Turning away from the path. To remain persevering brings good fortune. One should not cross the great water.",
+                "interpretation": "Remaining committed to proper nourishment and not taking unnecessary risks leads to good fortune."
+              },
+              {
+                "line_number": 6,
+                "text": "The source of nourishment. Awareness of danger brings good fortune. It furthers one to cross the great water.",
+                "interpretation": "Understanding the importance of nourishment and recognizing potential dangers leads to good fortune. Taking calculated risks can be beneficial."
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "name": "Preponderance of the Great",
+            "chinese_name": "大過 (Dà Guò)",
+            "representation": "011110",
+            "overall_meaning": "Preponderance of the Great signifies a situation where extraordinary effort is required to address an overwhelming challenge. It emphasizes the need for decisive and strong action.",
+            "advice": "Take decisive action and put in extraordinary effort to overcome significant challenges. Be mindful of potential risks.",
+            "keywords": ["extraordinary effort", "decisive action", "challenges", "risks"],
+            "creative_description": "Like a beam that must bear a heavy load, the preponderance of the great requires strength and decisive action to support and balance the situation.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "The leg of the bed is split. Those who persevere are destroyed. Misfortune.",
+                "interpretation": "Initial instability indicates potential danger. Correct the imbalance early to avoid further harm."
+              },
+              {
+                "line_number": 2,
+                "text": "The beam is sagging. Good fortune if one perseveres.",
+                "interpretation": "Recognize the strain and take corrective action to restore balance. Perseverance brings good fortune."
+              },
+              {
+                "line_number": 3,
+                "text": "The ridgepole sags to the breaking point. Misfortune.",
+                "interpretation": "Excessive strain leads to collapse. Avoid pushing beyond the breaking point."
+              },
+              {
+                "line_number": 4,
+                "text": "The ridgepole is braced. Good fortune. If there are ulterior motives, it is humiliating.",
+                "interpretation": "Strengthen and support the structure. Sincere actions lead to good fortune, but hidden agendas cause shame."
+              },
+              {
+                "line_number": 5,
+                "text": "A withered poplar puts forth flowers. An older woman takes a husband. No blame. No praise.",
+                "interpretation": "Unexpected renewal is possible, but may not bring significant recognition or blame."
+              },
+              {
+                "line_number": 6,
+                "text": "One must go through the water. It goes over one's head. Misfortune. No blame.",
+                "interpretation": "Facing overwhelming challenges may lead to temporary misfortune. Acceptance without self-blame is necessary."
+              }
+            ]
+          },    
+          {
+            "id": 29,
+            "name": "The Abysmal (Water)",
+            "chinese_name": "坎 (Kǎn)",
+            "representation": "010010",
+            "overall_meaning": "The Abysmal signifies a time of danger and difficulty, where perseverance and adaptability are essential for overcoming challenges.",
+            "advice": "Remain steadfast and adaptable in the face of danger. Perseverance and inner strength will see you through difficulties.",
+            "keywords": ["danger", "difficulty", "perseverance", "adaptability"],
+            "creative_description": "Like water that flows through deep and dangerous gorges, The Abysmal emphasizes the need for perseverance and adaptability to navigate through challenges.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "Repetition of the Abysmal. In the abyss one falls into a pit. Misfortune.",
+                "interpretation": "Repeated dangers require careful navigation. Avoid falling deeper into trouble."
+              },
+              {
+                "line_number": 2,
+                "text": "The abyss is dangerous. One should strive to attain small things only.",
+                "interpretation": "Focus on small, achievable goals to safely navigate through difficulties."
+              },
+              {
+                "line_number": 3,
+                "text": "Forward and backward, abyss on abyss. In danger like this, pause at first and wait, otherwise you will fall into a pit in the abyss. Do not act in this way.",
+                "interpretation": "When surrounded by danger, pause and assess before moving forward to avoid deeper trouble."
+              },
+              {
+                "line_number": 4,
+                "text": "A jug of wine, a bowl of rice with it, earthen vessels simply handed in through the window. There is certainly no blame in this.",
+                "interpretation": "Simple and sincere efforts are blameless and can provide relief even in difficult times."
+              },
+              {
+                "line_number": 5,
+                "text": "The abyss is not filled to overflowing, it is filled only to the rim. No blame.",
+                "interpretation": "Maintain balance and do not overextend in dangerous situations to avoid negative consequences."
+              },
+              {
+                "line_number": 6,
+                "text": "Bound with cords and ropes, shut in between thorn-hedged prison walls. For three years one does not find the way. Misfortune.",
+                "interpretation": "Severe restrictions and prolonged confinement lead to significant misfortune. Seek to avoid such entrapments."
+              }
+            ]
+          },
+          {
+            "id": 30,
+            "name": "The Clinging, Fire",
+            "chinese_name": "離 (Lí)",
+            "representation": "101101",
+            "overall_meaning": "The Clinging signifies the importance of clarity and awareness, and the need to adhere to what is bright and enlightening.",
+            "advice": "Seek clarity and maintain awareness. Adhere to enlightening principles and stay true to what illuminates your path.",
+            "keywords": ["clarity", "awareness", "illumination", "adherence"],
+            "creative_description": "Like fire that clings to its source, The Clinging emphasizes the need for clarity, awareness, and adherence to enlightening principles.",
+            "lines": [
+              {
+                "line_number": 1,
+                "text": "The footprints run crisscross. If one is seriously intent, no blame.",
+                "interpretation": "Initial confusion can be overcome with serious intent and focus."
+              },
+              {
+                "line_number": 2,
+                "text": "Yellow light. Supreme good fortune.",
+                "interpretation": "Clarity and wisdom, symbolized by the yellow light, bring supreme good fortune."
+              },
+              {
+                "line_number": 3,
+                "text": "In the light of the setting sun, men either beat the pot and sing or loudly bewail the approach of old age. Misfortune.",
+                "interpretation": "Neglecting responsibilities and indulging in distractions during times of decline leads to misfortune."
+              },
+              {
+                "line_number": 4,
+                "text": "Its coming is sudden; it flames up, dies down, is thrown away.",
+                "interpretation": "Sudden and intense actions without sustained effort lead to failure."
+              },
+              {
+                "line_number": 5,
+                "text": "Tears in floods, sighing and lamenting. Good fortune.",
+                "interpretation": "Emotional release and genuine expressions of grief lead to eventual good fortune."
+              },
+              {
+                "line_number": 6,
+                "text": "The king uses him to march forth and chastise. Then it is best to kill the leaders and take captive the followers. No blame.",
+                "interpretation": "Decisive and just actions to address wrongdoing lead to success and stability."
+              }
+            ]
+          },                          
+    ]
+  
