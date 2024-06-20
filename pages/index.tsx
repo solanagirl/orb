@@ -2188,13 +2188,9 @@ function updateCanvasGlow(ctx: CanvasRenderingContext2D, hexagram: LineType[]) {
     '#E6CEFF'  // Light Pastel Purple
 ];
 
+  const filteredArray = reading?.changing?.filter((line: any) => line !== undefined);
+  console.log(filteredArray);
 
-    // Function to get a color based on the keyword index
-    const getKeywordColor = (index: any) => {
-      // Ensure we loop back around if there are more keywords than colors
-      return lavenderAndPurpleShades[index % lavenderAndPurpleShades.length];
-  };
-  console.log(reading)
   return (
     <>
       <Head>
@@ -2210,7 +2206,7 @@ function updateCanvasGlow(ctx: CanvasRenderingContext2D, hexagram: LineType[]) {
           {
             reading?.advice ? (
               <div style={{ width: 'fit-content', display: "flex", flexDirection: 'row', flexWrap: 'wrap', gap: '8px', justifyItems: "center", alignItems: 'center'}}>
-                <p>{ reading.changing.filter((line: any) => {line?.meaning}).length } changing lines.</p>
+                <p>{ filteredArray.length } changing lines.</p>
                 <p style={{ width: '60%', textWrap: 'nowrap', overflow: 'clip', overflowClipMargin: '6px', overflowClipBox: "padding-box"}}>{reading.advice}</p>
               <a href="/mint" style={{ textDecoration: 'underline'}}>Mint this fortune to read more.</a></div>
             ) : (
@@ -2224,7 +2220,7 @@ function updateCanvasGlow(ctx: CanvasRenderingContext2D, hexagram: LineType[]) {
         <div>
         { reading ? (
           <div style={{ width: '100%', display: "flex", flexDirection: 'column', justifyItems: 'center', alignItems: 'center'}}>
-            <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center", fontFamily: "Bonsad"}}>{reading ? `No.${reading.id}:${reading.chinese_name}` : ''}</p>
+            <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center", fontFamily: "Bonsad"}}>{reading.id ? `No.${reading.id}:${reading.chinese_name}` : 'Waiting for Interpretation'}</p>
             <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center"}}>{reading ? reading.name : 'Ask the Orb'}</p>
             <div style={{ width: "60%", display: "flex", flexDirection: 'column', justifyItems: 'center', alignItems: 'center', gap: '24px'}}>
             <div>
