@@ -2,8 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Chat from "@/components/Chat";
-import { Navbar } from "@/components/Navbar";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 interface LineType {
     symbol: string;
@@ -1315,7 +1314,637 @@ const hexagrams =
             }
           ]
         },
-
+        {
+          "id": 32,
+          "name": "Duration",
+          "chinese_name": "恆 (Héng)",
+          "representation": "111101",
+          "overall_meaning": "Duration signifies the importance of perseverance and constancy. It emphasizes the value of long-term commitment and enduring principles.",
+          "advice": "Remain steadfast and committed to your principles. Perseverance and constancy lead to lasting success.",
+          "keywords": ["perseverance", "constancy", "commitment", "endurance"],
+          "creative_description": "Like the unchanging nature of heaven and earth, Duration emphasizes the need for perseverance and constancy to achieve lasting success.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Seeking duration too hastily brings misfortune persistently. Nothing that would further.",
+              "interpretation": "Rushing into commitments leads to persistent misfortune. Take time to build a solid foundation."
+            },
+            {
+              "line_number": 2,
+              "text": "Remorse disappears.",
+              "interpretation": "Steadfastness and patience remove any regret and bring stability."
+            },
+            {
+              "line_number": 3,
+              "text": "He who does not give duration to his character meets with disgrace. Persistent humiliation.",
+              "interpretation": "Lack of consistency and integrity in one's character leads to disgrace and ongoing shame."
+            },
+            {
+              "line_number": 4,
+              "text": "No game in the field.",
+              "interpretation": "A lack of resources or opportunities requires patience and perseverance."
+            },
+            {
+              "line_number": 5,
+              "text": "Giving duration to one's character through perseverance. This is good fortune for a woman, misfortune for a man.",
+              "interpretation": "Perseverance in character is generally good, but specific roles or expectations may influence outcomes."
+            },
+            {
+              "line_number": 6,
+              "text": "Restlessness as a condition brings misfortune.",
+              "interpretation": "Constant agitation and instability lead to misfortune. Seek calm and consistency."
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "Retreat",
+          "chinese_name": "遯 (Dùn)",
+          "representation": "100011",
+          "overall_meaning": "Retreat signifies a strategic withdrawal to avoid danger and conserve strength. It emphasizes the importance of knowing when to step back to preserve resources and regroup.",
+          "advice": "Recognize the need to retreat strategically. Preserve your strength and avoid unnecessary confrontations.",
+          "keywords": ["withdrawal", "preservation", "strategy", "caution"],
+          "creative_description": "Like the mountain that stands firm by stepping back, Retreat emphasizes the importance of strategic withdrawal to conserve strength and avoid danger.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "At the tail in retreat. This is dangerous. One must not wish to undertake anything.",
+              "interpretation": "Retreating too late is dangerous. Avoid taking risks during this time."
+            },
+            {
+              "line_number": 2,
+              "text": "He holds him fast with yellow oxhide. No one can tear him loose.",
+              "interpretation": "A firm and secure retreat ensures safety. Strong bonds and support are crucial."
+            },
+            {
+              "line_number": 3,
+              "text": "A halted retreat is nerve-wracking and dangerous. To retain people as men and maidservants brings good fortune.",
+              "interpretation": "A poorly executed retreat causes stress and danger. Secure loyal support for a safe withdrawal."
+            },
+            {
+              "line_number": 4,
+              "text": "Voluntary retreat brings good fortune to the superior man and downfall to the inferior man.",
+              "interpretation": "Choosing to retreat voluntarily is wise and brings good fortune to those of strong character."
+            },
+            {
+              "line_number": 5,
+              "text": "Friendly retreat. Perseverance brings good fortune.",
+              "interpretation": "A well-supported and friendly retreat ensures success. Stay committed to the decision."
+            },
+            {
+              "line_number": 6,
+              "text": "Cheerful retreat. Everything serves to further.",
+              "interpretation": "A positive and well-timed retreat opens up new opportunities. Embrace the change."
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "The Power of the Great",
+          "chinese_name": "大壯 (Dà Zhuàng)",
+          "representation": "111101",
+          "overall_meaning": "The Power of the Great signifies a time of great strength and energy, emphasizing the importance of using this power wisely and responsibly.",
+          "advice": "Harness your strength and energy wisely. Use your power responsibly to achieve positive outcomes.",
+          "keywords": ["strength", "energy", "responsibility", "power"],
+          "creative_description": "Like thunder that resonates powerfully through the heavens, The Power of the Great emphasizes the need to use great strength and energy wisely and responsibly.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Power in the toes. Continuing brings misfortune. This is certainly true.",
+              "interpretation": "Acting on impulse and without consideration leads to misfortune. Exercise caution."
+            },
+            {
+              "line_number": 2,
+              "text": "Perseverance brings good fortune.",
+              "interpretation": "Continued effort and determination bring positive results. Stay committed."
+            },
+            {
+              "line_number": 3,
+              "text": "The inferior man works through power. The superior man does not act thus. To continue is dangerous. A goat butts against a hedge and gets its horns entangled.",
+              "interpretation": "Using brute force is not wise. Intelligent and thoughtful action is necessary to avoid danger."
+            },
+            {
+              "line_number": 4,
+              "text": "Perseverance brings good fortune. Remorse disappears. The hedge opens; there is no entanglement. Power depends upon the axle of a big cart.",
+              "interpretation": "Steadfastness leads to success. Obstacles are removed through careful and steady efforts."
+            },
+            {
+              "line_number": 5,
+              "text": "Loses the goat with ease. No remorse.",
+              "interpretation": "Letting go of a stubborn pursuit brings relief and avoids regret."
+            },
+            {
+              "line_number": 6,
+              "text": "A goat butts against a hedge. It cannot go backward, it cannot go forward. Nothing serves to further. If one notes the difficulty, this brings good fortune.",
+              "interpretation": "Recognizing and addressing an impasse leads to good fortune. Do not force progress."
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "Progress",
+          "chinese_name": "晉 (Jìn)",
+          "representation": "110101",
+          "overall_meaning": "Progress signifies a time of advancement and forward movement. It emphasizes the importance of clear vision and steady effort to achieve success.",
+          "advice": "Maintain a clear vision and make steady progress towards your goals. Use your momentum to advance positively.",
+          "keywords": ["advancement", "forward movement", "vision", "effort"],
+          "creative_description": "Like the rising sun that illuminates the world, Progress emphasizes the power of clear vision and steady effort to achieve success and move forward.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Progressing, but turned back. Perseverance brings good fortune. If one meets with no confidence, one should remain calm. No mistake.",
+              "interpretation": "Initial setbacks can be overcome with perseverance. Remain calm and confident."
+            },
+            {
+              "line_number": 2,
+              "text": "Progressing, but in sorrow. Perseverance brings good fortune. Then one obtains great happiness from one's ancestress.",
+              "interpretation": "Advancing despite difficulties brings eventual happiness and good fortune."
+            },
+            {
+              "line_number": 3,
+              "text": "All are in accord. Remorse disappears.",
+              "interpretation": "Harmony and agreement with others eliminate regrets and ensure smooth progress."
+            },
+            {
+              "line_number": 4,
+              "text": "Progress like a hamster. Perseverance brings danger.",
+              "interpretation": "Advancing timidly or cautiously can be dangerous. Be bold and confident."
+            },
+            {
+              "line_number": 5,
+              "text": "Remorse disappears. Take not gain and loss to heart. Undertakings bring good fortune. Everything serves to further.",
+              "interpretation": "Letting go of attachment to outcomes brings good fortune. Focus on the process."
+            },
+            {
+              "line_number": 6,
+              "text": "Making progress with the horns is permissible only for the purpose of punishing one's own city. To be conscious of danger brings good fortune. No blame. Perseverance brings humiliation.",
+              "interpretation": "Use forceful measures only when necessary and be aware of potential dangers. Persevere wisely."
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "Darkening of the Light",
+          "chinese_name": "明夷 (Míng Yí)",
+          "representation": "101110",
+          "overall_meaning": "Darkening of the Light signifies a time of adversity and obscurity, where wisdom and caution are needed to navigate through difficult situations.",
+          "advice": "Exercise caution and remain vigilant during times of adversity. Use wisdom to navigate through challenges.",
+          "keywords": ["adversity", "obscurity", "caution", "wisdom"],
+          "creative_description": "Like the sun setting behind the mountains, Darkening of the Light emphasizes the need for wisdom and caution to navigate through periods of adversity and obscurity.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Darkening of the light during flight. He lowers his wings. The superior man does not eat for three days on his wanderings. But he has somewhere to go. The host has occasion to gossip about him.",
+              "interpretation": "In difficult times, restraint and discretion are necessary. Endure temporary hardships with dignity."
+            },
+            {
+              "line_number": 2,
+              "text": "Darkening of the light injures him in the left thigh. He gives aid with the strength of a horse. Good fortune.",
+              "interpretation": "Despite suffering and injury, using one's strength to help others brings good fortune."
+            },
+            {
+              "line_number": 3,
+              "text": "Darkening of the light during the hunt in the south. Their great leader is captured. One must not expect perseverance too soon.",
+              "interpretation": "During pursuits, expect setbacks and delays. Perseverance is necessary but may take time."
+            },
+            {
+              "line_number": 4,
+              "text": "He penetrates the left side of the belly. One gets at the very heart of the darkening of the light, and leaves the gate and courtyard.",
+              "interpretation": "Understanding the core of adversity allows one to find a way out. Seek deeper insights."
+            },
+            {
+              "line_number": 5,
+              "text": "Darkening of the light as with Prince Chi. Perseverance furthers.",
+              "interpretation": "Endure and remain steadfast like Prince Chi in times of hardship. Perseverance leads to success."
+            },
+            {
+              "line_number": 6,
+              "text": "Not light but darkness. First he climbs up to heaven, then he plunges into the depths of the earth.",
+              "interpretation": "Great fluctuations between success and failure. Maintain balance and avoid extremes."
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "The Family (The Clan)",
+          "chinese_name": "家人 (Jiā Rén)",
+          "representation": "101011",
+          "overall_meaning": "The Family signifies the importance of harmony and proper relationships within the family and community. It emphasizes the need for clear roles and mutual respect.",
+          "advice": "Foster harmony and respect within the family and community. Establish clear roles and responsibilities.",
+          "keywords": ["harmony", "family", "roles", "respect"],
+          "creative_description": "Like a well-organized household, The Family emphasizes the importance of clear roles and mutual respect to maintain harmony within the family and community.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Firm seclusion within the family. Remorse disappears.",
+              "interpretation": "Establishing firm boundaries and roles within the family leads to harmony and eliminates regrets."
+            },
+            {
+              "line_number": 2,
+              "text": "She should not follow her whims. She must attend within to the food. Perseverance brings good fortune.",
+              "interpretation": "Maintaining focus on responsibilities and avoiding whims ensures good fortune and harmony."
+            },
+            {
+              "line_number": 3,
+              "text": "When tempers flare, reprimand is necessary. Remorse disappears.",
+              "interpretation": "Addressing conflicts and maintaining discipline within the family leads to harmony."
+            },
+            {
+              "line_number": 4,
+              "text": "She is the treasure of the house. Great good fortune.",
+              "interpretation": "Recognizing and valuing key members within the family brings great good fortune."
+            },
+            {
+              "line_number": 5,
+              "text": "As a king, he approaches his family. Fear not. Good fortune.",
+              "interpretation": "Leading the family with authority and care ensures good fortune and harmony."
+            },
+            {
+              "line_number": 6,
+              "text": "His work commands respect. In the end, good fortune comes.",
+              "interpretation": "Diligent and respectful work within the family brings lasting good fortune."
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "Opposition",
+          "chinese_name": "睽 (Kuí)",
+          "representation": "110011",
+          "overall_meaning": "Opposition signifies a time of conflict and divergence, where differences in opinions and goals lead to tension and separation. It emphasizes the need for understanding and flexibility to navigate these challenges.",
+          "advice": "Seek understanding and remain flexible in the face of conflict. Use diplomacy and patience to navigate opposition.",
+          "keywords": ["conflict", "divergence", "understanding", "flexibility"],
+          "creative_description": "Like fire over water, Opposition highlights the tension and conflict that arise from differences, and the need for understanding and flexibility to find harmony.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Remorse disappears. If you lose your horse, do not run after it; it will come back of its own accord. When you see evil people, guard yourself against mistakes.",
+              "interpretation": "Stay calm and avoid impulsive actions. Trust that things will resolve naturally and remain vigilant."
+            },
+            {
+              "line_number": 2,
+              "text": "One meets his lord in a narrow street. No blame.",
+              "interpretation": "Unexpected encounters can lead to positive outcomes. Stay open and flexible."
+            },
+            {
+              "line_number": 3,
+              "text": "One sees the wagon dragged back, the oxen halted, a man's hair and nose cut off. Not a good beginning, but a good end.",
+              "interpretation": "Initial setbacks and conflicts may be harsh, but perseverance leads to a favorable outcome."
+            },
+            {
+              "line_number": 4,
+              "text": "Isolated through opposition, one meets a like-minded man with whom one can associate in good faith. Despite the danger, no blame.",
+              "interpretation": "Finding common ground and allies in times of opposition ensures safety and success."
+            },
+            {
+              "line_number": 5,
+              "text": "Remorse disappears. The companion bites his way through the wrappings. If one goes to him, how could it be a mistake?",
+              "interpretation": "Resolving misunderstandings and breaking through barriers leads to positive resolutions."
+            },
+            {
+              "line_number": 6,
+              "text": "Isolated through opposition, one sees one's companion as a pig covered with dirt, as a wagon full of devils. First one draws a bow against him, then one lays the bow aside. He is not a robber; he will woo at the right time. As one goes, rain falls; then good fortune comes.",
+              "interpretation": "Initial mistrust and conflict can transform into understanding and harmony. Patience and open-mindedness bring good fortune."
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "Obstruction",
+          "chinese_name": "蹇 (Jiǎn)",
+          "representation": "100101",
+          "overall_meaning": "Obstruction signifies a time of obstacles and challenges, where progress is hindered by difficulties. It emphasizes the need for patience, reflection, and strategic planning to overcome these barriers.",
+          "advice": "Exercise patience and reflection. Develop strategic plans to navigate and overcome obstacles.",
+          "keywords": ["obstacles", "challenges", "patience", "strategy"],
+          "creative_description": "Like a traveler facing a steep mountain, Obstruction highlights the need for patience and strategic planning to navigate through challenges and overcome barriers.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Going leads to obstructions, coming meets with praise.",
+              "interpretation": "Pushing forward aggressively leads to obstacles. Retreating or taking a step back can bring better results."
+            },
+            {
+              "line_number": 2,
+              "text": "The servant suffers obstructions upon obstructions. Misfortune.",
+              "interpretation": "Facing repeated difficulties can lead to misfortune. Be cautious and deliberate in actions."
+            },
+            {
+              "line_number": 3,
+              "text": "Going leads to obstructions, hence he comes back.",
+              "interpretation": "Recognize when to stop pushing forward and take time to reassess and regroup."
+            },
+            {
+              "line_number": 4,
+              "text": "Going leads to obstructions, coming leads to union.",
+              "interpretation": "Instead of forging ahead, seek to connect with others and find strength in unity."
+            },
+            {
+              "line_number": 5,
+              "text": "In the midst of obstructions, friends come.",
+              "interpretation": "Even in difficult times, support and help from friends can appear unexpectedly."
+            },
+            {
+              "line_number": 6,
+              "text": "Going leads to obstructions, coming leads to great good fortune. It furthers one to see the great man.",
+              "interpretation": "Avoid pushing forward and instead seek the advice and support of wise and influential people."
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "Deliverance",
+          "chinese_name": "解 (Xiè)",
+          "representation": "010100",
+          "overall_meaning": "Deliverance signifies a time of relief and liberation from obstacles and difficulties. It emphasizes the importance of resolution and moving forward after overcoming challenges.",
+          "advice": "Embrace relief and liberation. Focus on resolving issues and moving forward.",
+          "keywords": ["relief", "liberation", "resolution", "moving forward"],
+          "creative_description": "Like a storm that clears the sky, Deliverance emphasizes the relief and liberation that comes after overcoming challenges and resolving issues.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Without blame.",
+              "interpretation": "The situation is clear and uncomplicated. Proceed without guilt or hesitation."
+            },
+            {
+              "line_number": 2,
+              "text": "One kills three foxes in the field and receives a yellow arrow. Perseverance brings good fortune.",
+              "interpretation": "Successfully overcoming deceitful obstacles brings rewards. Perseverance is beneficial."
+            },
+            {
+              "line_number": 3,
+              "text": "If a man carries a burden on his back and nonetheless rides in a carriage, he thereby encourages robbers to draw near. Perseverance leads to humiliation.",
+              "interpretation": "Attempting to do too much at once invites trouble. Focus on one thing at a time to avoid failure."
+            },
+            {
+              "line_number": 4,
+              "text": "Deliver yourself from your great toe. Then the companion comes, and they can move forward.",
+              "interpretation": "Freeing yourself from minor entanglements allows for collaboration and progress."
+            },
+            {
+              "line_number": 5,
+              "text": "If only the superior man can deliver himself, it brings good fortune. Then let him consider it an occasion for rejoicing.",
+              "interpretation": "Self-reliance and independence lead to good fortune. Celebrate the achievement."
+            },
+            {
+              "line_number": 6,
+              "text": "The prince shoots at a hawk on a high wall. He kills it. Everything serves to further.",
+              "interpretation": "Taking decisive action against a challenging target ensures success and progress."
+            }
+          ]
+        },
+        
+        {
+          "id": 41,
+          "name": "Decrease",
+          "chinese_name": "損 (Sǔn)",
+          "representation": "100110",
+          "overall_meaning": "Decrease signifies a time of reduction and restraint, where less is more. It emphasizes the importance of simplifying and focusing on what truly matters.",
+          "advice": "Embrace reduction and simplify your life. Focus on what is truly important and let go of excess.",
+          "keywords": ["reduction", "restraint", "simplification", "focus"],
+          "creative_description": "Like a river that flows more smoothly with less water, Decrease emphasizes the importance of reduction and restraint to create clarity and focus on what truly matters.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Going quickly when one's tasks are finished is without blame. But one must reflect on how much one may decrease others.",
+              "interpretation": "Act swiftly once your responsibilities are complete, but be mindful of how your actions affect others."
+            },
+            {
+              "line_number": 2,
+              "text": "Perseverance furthers. To undertake something brings misfortune. Without decreasing oneself, one is able to bring increase to others.",
+              "interpretation": "Consistency is beneficial. Avoid taking on new ventures that may overextend you. Focus on helping others."
+            },
+            {
+              "line_number": 3,
+              "text": "When three people journey together, their number decreases by one. When one man journeys alone, he finds a companion.",
+              "interpretation": "Group dynamics can lead to loss, while independence attracts new alliances."
+            },
+            {
+              "line_number": 4,
+              "text": "If a man decreases his faults, it makes the other hasten to come and rejoice. No blame.",
+              "interpretation": "Improving oneself attracts positive responses from others. There is no fault in this."
+            },
+            {
+              "line_number": 5,
+              "text": "Someone does indeed increase him. Ten pairs of tortoises cannot oppose it. Supreme good fortune.",
+              "interpretation": "Support and help from others lead to significant and unopposable good fortune."
+            },
+            {
+              "line_number": 6,
+              "text": "If one is increased without depriving others, there is no blame. Perseverance brings good fortune. It furthers one to undertake something. One obtains servants but no longer has a separate home.",
+              "interpretation": "Gaining without causing loss to others is blameless. Perseverance and new ventures bring good fortune and support."
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "Increase",
+          "chinese_name": "益 (Yì)",
+          "representation": "011010",
+          "overall_meaning": "Increase signifies a time of growth and abundance, where efforts are rewarded and opportunities for expansion are present. It emphasizes the importance of generosity and proactive effort.",
+          "advice": "Embrace opportunities for growth and abundance. Be generous and proactive in your efforts to expand and improve.",
+          "keywords": ["growth", "abundance", "generosity", "effort"],
+          "creative_description": "Like the wind that nourishes the trees, Increase emphasizes the importance of growth and expansion through generous and proactive efforts.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "It furthers one to accomplish great deeds. Supreme good fortune. No blame.",
+              "interpretation": "Taking on significant tasks leads to great success and is without fault."
+            },
+            {
+              "line_number": 2,
+              "text": "Someone does indeed increase him; ten pairs of tortoises cannot oppose it. Constant perseverance brings good fortune. The king presents him before God. Good fortune.",
+              "interpretation": "Support from others ensures unopposable success. Perseverance and recognition lead to good fortune."
+            },
+            {
+              "line_number": 3,
+              "text": "One is enriched through unfortunate events. No blame, if you are sincere and walk in the middle, and report with a presentation of peace.",
+              "interpretation": "Adversity can lead to growth if approached with sincerity and balance. Communicate your intentions clearly."
+            },
+            {
+              "line_number": 4,
+              "text": "If you walk in the middle and report to the prince, he will follow. It furthers one to be used in the removal of the capital.",
+              "interpretation": "Balanced actions and clear communication attract support from influential figures. This is beneficial for significant changes."
+            },
+            {
+              "line_number": 5,
+              "text": "If in truth you have a kind heart, ask not. Supreme good fortune. Truly, kindness will be recognized in the end.",
+              "interpretation": "Genuine kindness and generosity lead to supreme good fortune. Your good deeds will be acknowledged."
+            },
+            {
+              "line_number": 6,
+              "text": "He brings increase to no one. Indeed, someone even strikes him. He does not keep his heart constantly steady. Misfortune.",
+              "interpretation": "Failure to help others and inconsistency lead to misfortune. Remain steadfast and generous."
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "Breakthrough (Resoluteness)",
+          "chinese_name": "夬 (Guài)",
+          "representation": "111011",
+          "overall_meaning": "Breakthrough signifies a time of decisive action and resoluteness, where clarity and determination are needed to overcome obstacles and achieve success.",
+          "advice": "Take decisive action and be resolute in your efforts. Use clarity and determination to break through obstacles.",
+          "keywords": ["decisive action", "resoluteness", "clarity", "determination"],
+          "creative_description": "Like a powerful force that breaks through barriers, Breakthrough emphasizes the importance of clarity and determination in overcoming obstacles and achieving success.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Mighty in the forward-striding toes. When one goes and is not equal to the task, one makes a mistake.",
+              "interpretation": "Initial enthusiasm must be matched with capability. Avoid taking on tasks beyond your means."
+            },
+            {
+              "line_number": 2,
+              "text": "A cry of alarm. Arms at evening and at night. Fear nothing.",
+              "interpretation": "Remain vigilant and prepared for challenges, but do not let fear dominate your actions."
+            },
+            {
+              "line_number": 3,
+              "text": "To be powerful in the cheekbones brings misfortune. The superior man is firmly resolved. He walks alone and is caught in the rain. He is bespattered, and people murmur against him. No blame.",
+              "interpretation": "Overly aggressive actions lead to backlash. Stay firm in your resolve despite criticism."
+            },
+            {
+              "line_number": 4,
+              "text": "There is no skin on his thighs, and walking comes hard. If a man were to let himself be led like a sheep, remorse would disappear. But if these words are heard, they will not be believed.",
+              "interpretation": "Difficulties can be overcome with humility and willingness to be guided. However, advice may be met with skepticism."
+            },
+            {
+              "line_number": 5,
+              "text": "In dealing with weeds, firm resolution is necessary. Walking in the middle remains free of blame.",
+              "interpretation": "Addressing problems requires firmness. Maintain a balanced approach to avoid blame."
+            },
+            {
+              "line_number": 6,
+              "text": "No cry. In the end, good fortune comes.",
+              "interpretation": "Stay calm and composed. Ultimately, this approach leads to good fortune."
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "Coming to Meet",
+          "chinese_name": "姤 (Gòu)",
+          "representation": "011111",
+          "overall_meaning": "Coming to Meet signifies the arrival of unexpected encounters or influences. It emphasizes the importance of awareness and caution in dealing with new situations.",
+          "advice": "Stay aware and exercise caution with new encounters or influences. Be mindful of potential challenges.",
+          "keywords": ["encounters", "influences", "awareness", "caution"],
+          "creative_description": "Like a sudden wind meeting the sky, Coming to Meet highlights the importance of awareness and caution in dealing with unexpected encounters or influences.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "It must be checked with a brake of bronze. Perseverance brings good fortune. If one lets it take its course, one experiences misfortune.",
+              "interpretation": "Control initial impulses with discipline. Perseverance in restraint brings good fortune."
+            },
+            {
+              "line_number": 2,
+              "text": "There is a fish in the tank. No blame. Does not further guests.",
+              "interpretation": "Maintain a low profile and avoid unnecessary social interactions. Stay focused on your own tasks."
+            },
+            {
+              "line_number": 3,
+              "text": "There is no skin on his thighs, and walking comes hard. If one is mindful of the danger, no great mistake is made.",
+              "interpretation": "Recognize and acknowledge the difficulties ahead. Mindfulness of potential dangers prevents major mistakes."
+            },
+            {
+              "line_number": 4,
+              "text": "No fish in the tank. This leads to misfortune.",
+              "interpretation": "Neglecting important resources or relationships leads to negative consequences."
+            },
+            {
+              "line_number": 5,
+              "text": "A melon covered with willow leaves. Hidden lines. Then it drops down to one from heaven.",
+              "interpretation": "Unexpected rewards or solutions may appear. Stay open to hidden opportunities."
+            },
+            {
+              "line_number": 6,
+              "text": "He comes to meet with his horns. Humiliation. No blame.",
+              "interpretation": "Approaching situations aggressively leads to embarrassment. However, the intent is understood and blameless."
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "name": "Gathering Together (Massing)",
+          "chinese_name": "萃 (Cuì)",
+          "representation": "010011",
+          "overall_meaning": "Gathering Together signifies a time of unity and cooperation, where collective efforts are necessary to achieve common goals. It emphasizes the importance of bringing people together for a shared purpose.",
+          "advice": "Foster unity and cooperation. Bring people together to work towards common goals.",
+          "keywords": ["unity", "cooperation", "collective effort", "shared purpose"],
+          "creative_description": "Like a lake that gathers waters from various sources, Gathering Together emphasizes the importance of unity and cooperation in achieving common goals.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "If you are sincere, but not to the end, there will sometimes be confusion, sometimes gathering together. If you call out, then after one grasp of the hand you can laugh again. Regret not. Going is without blame.",
+              "interpretation": "Sincerity brings people together, but inconsistency leads to confusion. Reach out and maintain efforts to foster unity."
+            },
+            {
+              "line_number": 2,
+              "text": "Letting oneself be drawn brings good fortune and remains blameless. If one is sincere, it furthers one to bring even a small offering.",
+              "interpretation": "Allowing oneself to be guided by sincerity and contributing, even in small ways, brings good fortune."
+            },
+            {
+              "line_number": 3,
+              "text": "Gathering together amid sighs. Nothing that would further. Going is without blame. Slight humiliation.",
+              "interpretation": "Challenges in unity may cause frustration, but perseverance is blameless. Accept minor setbacks gracefully."
+            },
+            {
+              "line_number": 4,
+              "text": "Great good fortune. No blame.",
+              "interpretation": "Efforts in unity and cooperation lead to great good fortune and are blameless."
+            },
+            {
+              "line_number": 5,
+              "text": "If in gathering together one has position, this brings no blame. If there are some who are not yet sincerely in the work, sublime and enduring perseverance is needed. Then remorse disappears.",
+              "interpretation": "Holding a position of leadership in uniting efforts is blameless. Perseverance is needed to inspire sincerity in others."
+            },
+            {
+              "line_number": 6,
+              "text": "Lamenting and sighing, floods of tears. No blame.",
+              "interpretation": "Emotional expressions in the face of challenges are natural. Accept them without blame."
+            }
+          ]
+        },                   
+        {
+          "id": 46,
+          "name": "Pushing Upward",
+          "chinese_name": "升 (Shēng)",
+          "representation": "011001",
+          "overall_meaning": "Pushing Upward signifies a time of growth and progress through dedicated effort. It emphasizes the importance of perseverance and continuous improvement to achieve higher goals.",
+          "advice": "Persevere and continue to improve. Dedicate your efforts to achieve higher goals and progress.",
+          "keywords": ["growth", "progress", "perseverance", "improvement"],
+          "creative_description": "Like a plant pushing upward towards the light, Pushing Upward emphasizes the importance of perseverance and continuous improvement to achieve growth and progress.",
+          "lines": [
+            {
+              "line_number": 1,
+              "text": "Pushing upward that meets with confidence brings great good fortune.",
+              "interpretation": "Efforts met with confidence and support lead to great good fortune."
+            },
+            {
+              "line_number": 2,
+              "text": "If one is sincere, it furthers one to bring even a small offering. No blame.",
+              "interpretation": "Sincerity in efforts, even if small, brings positive results without blame."
+            },
+            {
+              "line_number": 3,
+              "text": "One pushes upward into an empty city.",
+              "interpretation": "Advancing towards goals may initially seem unchallenged, but remain vigilant and prepared."
+            },
+            {
+              "line_number": 4,
+              "text": "The king offers him Mount Chi. Good fortune. No blame.",
+              "interpretation": "Recognition and support from authority lead to good fortune and are without blame."
+            },
+            {
+              "line_number": 5,
+              "text": "Perseverance brings good fortune. One pushes upward by steps.",
+              "interpretation": "Steady and consistent effort leads to good fortune. Progress step by step."
+            },
+            {
+              "line_number": 6,
+              "text": "Pushing upward in darkness. It furthers one to be unremittingly persevering.",
+              "interpretation": "Even in challenging and unclear situations, continued perseverance is beneficial."
+            }
+          ]
+        },                     
   ]
 
 
@@ -1574,25 +2203,50 @@ function updateCanvasGlow(ctx: CanvasRenderingContext2D, hexagram: LineType[]) {
         <link rel="stylesheet" href="styles.css" />
       </Head>
       <main id={styles.main}>
-        <Navbar />
-        <div id={styles.overlay}></div>
+        <div style={{ width: "100%", display: "flex", justifyContent: 'flex-end', marginRight: '64px', marginTop: '36px'}}>
+        <WalletMultiButton />
+          </div>
+        <div id={styles.overlay}>
+          {
+            reading?.advice ? (
+              <div style={{ width: 'fit-content', display: "flex", flexDirection: 'row', flexWrap: 'wrap', gap: '8px', justifyItems: "center", alignItems: 'center'}}>
+                <p>{ reading.changing.filter((line: any) => {line?.meaning}).length } changing lines.</p>
+                <p style={{ width: '60%', textWrap: 'nowrap', overflow: 'clip', overflowClipMargin: '6px', overflowClipBox: "padding-box"}}>{reading.advice}</p>
+              <a href="/mint" style={{ textDecoration: 'underline'}}>Mint this fortune to read more.</a></div>
+            ) : (
+              <p></p>
+            )
+          }
+        </div>
         <div id={styles.container}>
-          <p id={styles.name}>
-          </p>
           <canvas id={styles.canvas} ref={canvasRef} onClick={nextStep} width="300" height="300"></canvas>
         </div>
-        <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center"}}>{reading ? reading.name : 'Orb the Oracle'}</p>
-          <div className={styles.chat}>
+        <div>
+        { reading ? (
+          <div style={{ width: '100%', display: "flex", flexDirection: 'column', justifyItems: 'center', alignItems: 'center'}}>
+            <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center", fontFamily: "Bonsad"}}>{reading ? `No.${reading.id}:${reading.chinese_name}` : ''}</p>
+            <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center"}}>{reading ? reading.name : 'Ask the Orb'}</p>
+            <div style={{ width: "60%", display: "flex", flexDirection: 'column', justifyItems: 'center', alignItems: 'center', gap: '24px'}}>
+            <div>
+            {reading.keywords?.map((keyword: String, index: React.Key) => (
+                <span key={index} className={styles.keyword_bubble}>
+                    {keyword}
+                </span>
+              ))}
+              </div>
+            <div className={styles.description}>{reading.creative_description}</div>
+            <div className={styles.meaning}>{reading.overall_meaning}</div>
+            </div>
+          </div>
+          ): (
+            <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center", userSelect: "none", padding: '10%'}}>Ask the Orb with intention</p>
+          )}
+            </div>
+          {/* <div >
               {
                 reading ? (
+                  <div className={styles.chat}>
                   <div>
-                    <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "left", fontFamily: "Bonsad"}}>{reading ? `No.${reading.id}:${reading.chinese_name}` : ''}</p>
-                  <div>
-                      {reading.keywords?.map((keyword: String, index: React.Key) => (
-                          <span key={index} className={styles.keyword_bubble} style={{ backgroundColor: getKeywordColor(index) }}>
-                              {keyword}
-                          </span>
-                      ))}
                   </div>
                   <div className={styles.description}>{reading.creative_description}</div>
                   <div className={styles.meaning}>{reading.overall_meaning}</div>
@@ -1614,11 +2268,10 @@ function updateCanvasGlow(ctx: CanvasRenderingContext2D, hexagram: LineType[]) {
                  </div>
                 ) : (
                   <div>
-                    <p className={styles.title} style={{ textShadow: `0 0 8px #ffffff, 0 0 45px ${primaryColor}`, textAlign: "center"}}>Click on the Orb with intention</p>
                   </div>
                 )
               }
-          </div>
+          </div> */}
       </main>
     </>
   );

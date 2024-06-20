@@ -121,11 +121,11 @@ a {
 
 /* Styles for the draggable part of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #1a1a2e, #FFD700 70%); /* Dark to gold gradient */
+  background: linear-gradient(180deg, #1a1a2e, #a17fe0 70%); /* Dark to gold gradient */
   border-radius: 6px;        /* rounded corners for the thumb */
-  border: 2px solid #FFD700; /* bright gold border for the thumb */
+  border: 2px solid #a17fe0; /* bright gold border for the thumb */
   box-shadow: inset 0 0 2px #FFFFFF, /* white inset shadow for a bright trim */
-              0 0 4px #FFA500; /* subtle outer shadow for depth */
+              0 0 4px #a17fe0; /* subtle outer shadow for depth */
 }
 
 /* Styles for the part of the scrollbar track that is not clickable */
@@ -138,5 +138,5 @@ a {
 /* Styles for Firefox */
 * {
   scrollbar-width: thin;         /* "auto" or "thin" */
-  scrollbar-color: #FFD700 #1a1a2e; /* thumb and track color */
+  scrollbar-color: #a17fe0 #1a1a2e; /* thumb and track color */
 }

@@ -45,8 +45,20 @@
     position: relative;
     z-index: 100;
     overflow: hidden; /* Ensure effects stay within the circle */
-    margin-top: 12vh;
     cursor: pointer;
+}
+
+#overlay {
+    position: absolute;
+    bottom: 0;
+    background-color: #1a1a2e;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px #ffffff, /* White inner glow for brightness */
+    0 0 30px #bb99ff, /* Soft outer glow for a magical feel */
+    0 0 45px #a17fe0, /* Deeper purple for mystical depth */
+    0 0 60px #a17fe0 inset; /* Inner glow to simulate depth of a crystal ball */
 }
 
 #nextButton {
@@ -68,33 +80,6 @@
 
 #nextButton:active {
     transform: scale(0.95); /* Slight decrease when clicked */
-}
-
-#smb {
-    width: 16vw;  
-}
-
-#character_container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: start;
-}
-
-#speech {
-    bottom: 12vh;
-    width: 14vw; /* Adjust based on the actual size of your speech bubble image */
-    height: 16vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/Group%2010%20(1).png');
-    background-size: cover; /* Ensure the background image covers the div completely */
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 #chinese_name {
@@ -151,11 +136,9 @@
     display: inline-block;
     padding: 5px 10px;
     margin: 5px;
-    border-radius: 15px;
     color: white;
     font-size: 2vh;
-    background-color: #6a5acd; /* Default color, will be overridden inline */
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 0 0 8px #ffffff, 0 0 45px #1a1a2e;
 }
 
 
@@ -172,9 +155,10 @@
 
 .chat {
     max-width: 100vw; 
-    width: 100%;
-    height: 40vh;
-    text-align: left;
+    width: 80%;
+    min-height: 20vh;
+    height: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2vh;
