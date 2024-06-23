@@ -2789,6 +2789,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionPostResponse>,
 ) {
+    
     if (req.body && req.body.account) {
         const mySigner = createNoopSigner(req.body.account);
 
@@ -2824,7 +2825,12 @@ export default async function handler(
         const serializedTransactionBuffer = Buffer.from(serializedTransaction);
         const transaction = serializedTransactionBuffer.toString('base64')
         const response = { transaction, message };
-
+        res.setHeader('Access-Control-Allow-Origin', '*'); 
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Encoding, Accept-Encoding');
+        res.setHeader('Access-Control-Allow-Methods', 'POST');
+        res.setHeader('Content-Encoding', 'compress');
+        res.setHeader('Content-Type', 'application/json');
+      
         res.status(200).json(response);
     } else {
         res.status(400);

@@ -55,7 +55,7 @@ export default function handler(
 ) {
   res.setHeader('Access-Control-Allow-Origin', '*'); 
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Encoding, Accept-Encoding');
-  res.setHeader('Access-Control-Allow-Methods', 'GET');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   res.setHeader('Content-Encoding', 'compress');
   res.setHeader('Content-Type', 'application/json');
 
