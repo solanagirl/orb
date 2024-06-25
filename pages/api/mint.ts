@@ -2930,26 +2930,19 @@ export default async function handler(
   res: NextApiResponse<ActionPostResponse | ActionError>,
 ) {
   try {
-    if (req.method === 'OPTIONS') {
+    if (req.method == 'OPTIONS') {
       res.status(200).end();   
       return res;
     } else if (req.method == 'POST') {
-        const transaction = await createNFT(req.body.account);
-        const serializedTransaction = transaction.serialize({requireAllSignatures: false});
-        const txString = serializedTransaction.toString('base64');
-        const response = { transaction: txString, message: "Minting 1 fortune for good karma..." };
-        res.status(200).json(response);
-        return res;
-      } else {
-        throw new Error('No reading generated.');
-      }
-  } catch (err) {
-    if (err === 'No reading generated.') {
-    res.status(500).json({ message: err });
-    return res;
+      const transaction = await createNFT(req.body.account);
+      const serializedTransaction = transaction.serialize({requireAllSignatures: false});
+      const txString = serializedTransaction.toString('base64');
+      const response = { transaction: txString, message: "Minting 1 fortune for good karma..." };
+      res.status(200).json(response);
+      return res;
     }
-    res.status(500);
-    return res;
-
+    return res.status(500).json({ message: 'No reading generated.' });
+  } catch (err) {
+    return res.status(500);
   }
 }
