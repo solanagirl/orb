@@ -2922,6 +2922,7 @@ async function createNFT(account: string) {
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
     transaction.sign(orbSigner);
+    transaction.sign(mintKeypair);
 
     return transaction;
 }
