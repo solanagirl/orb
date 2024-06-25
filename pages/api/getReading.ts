@@ -30,7 +30,15 @@ export default async function handler(
       const txString = serializedTransaction.toString('base64')
 
       const reading = generateReading();
-      res.status(200).json({ transaction: txString, message: `Orb says: ${reading.name}` });   
+      const messageOptions = [
+        `You received Hexagram ${reading.id}: ${reading.name} from the Orb.`,
+        `The Orb interprets: ${reading.overall_meaning}`,
+        `The Orb advises: ${reading.advice}`,
+        `The Orb describes the situation as: ${reading.creative_description}`,
+        `${reading.keywords?.toString()} are the Orb's keywords.`,
+        `${reading.changing!.length > 0 ? reading.changing?.map((line) => {return line.interpretation}).toString() : 'There are no changes.'}`,
+      ]
+      res.status(200).json({ transaction: txString, message: messageOptions[Math.floor(Math.random()*messageOptions.length)] });   
       return res;
     } else if (req.method == 'GET') {
       return res.status(200).end();

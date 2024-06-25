@@ -2759,7 +2759,7 @@ const hexagrams = [
       let hexagram: LineType[] = [];
   
       while (hexagram.length <= 6) {
-        if (hexagram.length < 6) {
+        if (hexagram.length >= 6) {
           return hexagram;
         }
   
