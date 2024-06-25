@@ -2975,9 +2975,8 @@ export default async function handler(
       return res;
     } else if (req.method == 'POST') {
       const transaction = await createNFT(req.body.account);
-      const response = { transaction: transaction, message: "Minting 1 fortune for good karma..." };
-      res.status(200).json(response);
-      return res;
+      const response: ActionPostResponse = { transaction: transaction, message: "Minting 1 fortune for good karma..." };
+      return res.status(200).json(response);;
     } else if (req.method == 'GET') {
       const response: ActionGetResponse = {
         icon: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb.PNG',
