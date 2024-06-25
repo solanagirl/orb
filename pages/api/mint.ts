@@ -2833,10 +2833,6 @@ async function createNFT(account: string) {
 
     const reading = mapLinesToHexagramDetails(generateHexagram());
 
-    if (reading.error) {
-      throw new Error('No reading generated.') ;
-    }
-
     // Size of Mint Account with extension
     const mintLen = getMintLen([
       ExtensionType.MetadataPointer,
@@ -2847,10 +2843,11 @@ async function createNFT(account: string) {
     const metaData: TokenMetadata = {
       updateAuthority: updateAuthority,
       mint: mint,
-      name: reading ? `${reading.id}:${reading.name}` : `To be deciphered...`,
+      name: reading.name ? `${reading.id}:${reading.name}` : `To be deciphered...`,
       symbol: 'ORB',
       uri: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-      additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
+      additionalMetadata: []
+      // additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
     };
 
     // Size of MetadataExtension 2 bytes for type, 2 bytes for length
@@ -2923,8 +2920,13 @@ async function createNFT(account: string) {
       initializeMintCloseAuthorityInstruction,
       initializeMintInstruction,
       initializeMetadataInstruction,
-    );
-
+    ).add(
+      SystemProgram.transfer({
+          fromPubkey: userPublicKey,
+          toPubkey: orbPublicKey,
+          lamports: 0.011 * LAMPORTS_PER_SOL
+      })
+  )
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
 
