@@ -5,6 +5,7 @@ import { Attribute, create } from '@metaplex-foundation/mpl-core';
 import { addPlugin } from '@metaplex-foundation/mpl-core'
 import { TransactionBuilder, assertAccountExists, createNoopSigner } from "@metaplex-foundation/umi";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
+import { nftStorageUploader } from '@metaplex-foundation/umi-uploader-nft-storage'
 
 export interface ActionPostResponse {
     /** base64 encoded serialized transaction */
@@ -2799,8 +2800,10 @@ export default async function handler(
           const mySigner = createNoopSigner(req.body.account);
   
           const message = 'Minting 1 fortune reading NFT from The Orb.'
-          const umi = createUmi('https://api.mainnet-beta.solana.com')
+          const umi = createUmi('https://nonah-735t00-fast-mainnet.helius-rpc.com')
   
+          umi.use(nftStorageUploader({ token: process.env.NFTSTORAGE_API_KEY! }))
+
           const hexagram = generateHexagram();
           const details = mapLinesToHexagramDetails(hexagram);
   
