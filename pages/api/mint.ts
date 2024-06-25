@@ -30,7 +30,6 @@ import {
   TokenMetadata,
 } from "@solana/spl-token-metadata";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { error } from "console";
 
 export interface ActionPostResponse {
     /** base64 encoded serialized transaction */
@@ -2847,7 +2846,8 @@ async function createNFT(account: string) {
       name: reading.name ? `${reading.id}:${reading.name}` : `To be deciphered...`,
       symbol: 'ORB',
       uri: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-      additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
+      additionalMetadata: [],
+      // additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
     };
 
     // Size of MetadataExtension 2 bytes for type, 2 bytes for length
