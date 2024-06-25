@@ -61,10 +61,10 @@ export default function handler(
     "label": "Ask",
     "links": {
         "actions": [
-        {
-            "label": "Get Reading", // button text
-            "href": "/api/mint"
-        },
+        // {
+        //     "label": "Get Reading", // button text
+        //     "href": "/api/mint"
+        // },
         // {
         //     "label": "Fortune Favors", // button text
         //     "href": "/api/hello"
