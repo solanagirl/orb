@@ -23,7 +23,7 @@ export default function handler(
           SystemProgram.transfer({
               fromPubkey: new PublicKey(req.body.account),
               toPubkey: new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk'),
-              lamports: amount / LAMPORTS_PER_SOL
+              lamports: amount * LAMPORTS_PER_SOL
           })
       )
   
