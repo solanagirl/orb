@@ -83,7 +83,7 @@ export default function handler(
         ]
     },
   });
-} else if (req.method === 'POST') {
+} else if (req.method === '') {
   const { data } = req.body
   const decodedData = JSON.parse(Buffer.from(data, 'base64').toString('utf-8'));
 

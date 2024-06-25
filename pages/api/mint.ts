@@ -2821,15 +2821,14 @@ function generateHexagram() {
 async function createNFT(account: string) {
     const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com');
     const userPublicKey = new PublicKey(account);
-    const orbPublicKey = new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk');
     const orbSigner = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(process.env.ORB_SECRET!)));
 
     let transaction: Transaction;
     const mintKeypair = Keypair.generate();
     const mint = mintKeypair.publicKey;
     const decimals = 0;
-    const mintAuthority = orbPublicKey;
-    const updateAuthority = orbPublicKey;
+    const mintAuthority = orbSigner.publicKey;
+    const updateAuthority = orbSigner.publicKey;
 
     const reading = mapLinesToHexagramDetails(generateHexagram());
 
@@ -2915,10 +2914,9 @@ async function createNFT(account: string) {
     ).add(
       SystemProgram.transfer({
           fromPubkey: userPublicKey,
-          toPubkey: orbPublicKey,
+          toPubkey: orbSigner.publicKey,
           lamports: 0.011 * LAMPORTS_PER_SOL
-      })
-  )
+      }))
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
     transaction.sign(orbSigner);
@@ -2935,7 +2933,7 @@ export default async function handler(
     if (req.method === 'OPTIONS') {
       res.status(200).end();   
       return res;
-    } else if (req.method === 'POST') {
+    } else if (req.method == 'POST') {
         const transaction = await createNFT(req.body.account);
         const serializedTransaction = transaction.serialize({requireAllSignatures: false});
         const txString = serializedTransaction.toString('base64');
