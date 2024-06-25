@@ -2828,8 +2828,10 @@ async function createNFT(account: string) {
     const mintAuthority = orbPublicKey;
     const updateAuthority = orbPublicKey;
 
+    console.timeStamp('Generating reading...');
     const reading = mapLinesToHexagramDetails(generateHexagram());
-      
+    console.timeEnd('Generating reading...');
+
     if (reading.error) {
       throw new Error('No reading generated.') ;
     }
@@ -2947,5 +2949,8 @@ export default async function handler(
     res.status(500).json({ message: err });
     return res;
     }
+    res.status(500);
+    return res;
+
   }
 }
