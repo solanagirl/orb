@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
+import { Connection, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export interface ActionPostResponse {
@@ -9,7 +9,7 @@ export interface ActionPostResponse {
     message?: string;
   }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionPostResponse>,
 ) {
@@ -18,6 +18,8 @@ export default function handler(
     res.status(200).end();   
     return res;
   } else if (req.method == 'POST') {
+    const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com')
+    const recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
       const amount = parseFloat(req.query.amount![0]);
       const transaction = new Transaction().add(
           SystemProgram.transfer({
@@ -26,6 +28,9 @@ export default function handler(
               lamports: amount * LAMPORTS_PER_SOL
           })
       )
+
+      transaction.recentBlockhash = recentBlockhash;
+      transaction.feePayer = new PublicKey(req.body.account);
   
       const serializedTransaction = transaction.serialize();
       const txString = serializedTransaction.toString('base64')
