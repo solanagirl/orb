@@ -76,12 +76,12 @@ export default function handler(
             },
             {
                 "label": "Donate", // button text
-                "href": "/api/hello/{amount}", // or /api/donate?amount={amount}
+                "href": "/api/donate?amount={amount}", // or /api/donate?amount={amount}
                 "parameters": [
                   // {amount} input field
                   {
                     "name": "amount", // input field name
-                    "label": "SOL amount" // text input placeholder
+                    "label": "SOL Donation" // text input placeholder
                   }
                 ]
               }
