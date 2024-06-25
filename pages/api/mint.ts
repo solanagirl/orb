@@ -1,11 +1,33 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { PublicKey, Transaction } from "@solana/web3.js";
+import {
+  Connection,
+  Keypair,
+  SystemProgram,
+  Transaction,
+  clusterApiUrl,
+  sendAndConfirmTransaction,
+  PublicKey,
+} from "@solana/web3.js";
+import {
+  ExtensionType,
+  TOKEN_2022_PROGRAM_ID,
+  createInitializeMintInstruction,
+  getMintLen,
+  createInitializeMetadataPointerInstruction,
+  createInitializeMintCloseAuthorityInstruction,
+  getMint,
+  getTokenMetadata,
+  TYPE_SIZE,
+  LENGTH_SIZE,
+} from "@solana/spl-token";
+import {
+  createInitializeInstruction,
+  createUpdateFieldInstruction,
+  createRemoveKeyInstruction,
+  pack,
+  TokenMetadata,
+} from "@solana/spl-token-metadata";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { Attribute, create } from '@metaplex-foundation/mpl-core';
-import { addPlugin } from '@metaplex-foundation/mpl-core'
-import { TransactionBuilder, assertAccountExists, createNoopSigner } from "@metaplex-foundation/umi";
-import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
-import { nftStorageUploader } from '@metaplex-foundation/umi-uploader-nft-storage'
 
 export interface ActionPostResponse {
     /** base64 encoded serialized transaction */
@@ -2784,7 +2806,107 @@ function generateHexagram() {
     return hexagram;
 }
 
-console.log(mapLinesToHexagramDetails(generateHexagram()));
+async function createNFT(account: string) {
+    const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com');
+    const userPublicKey = new PublicKey(account);
+    const orbPublicKey = new PublicKey('');
+
+    let transaction: Transaction;
+    const mintKeypair = Keypair.generate();
+    const mint = mintKeypair.publicKey;
+    const decimals = 0;
+    const mintAuthority = orbPublicKey;
+    const updateAuthority = orbPublicKey;
+
+    const reading = mapLinesToHexagramDetails(generateHexagram());
+  
+    // Size of Mint Account with extension
+    const mintLen = getMintLen([
+      ExtensionType.MetadataPointer,
+      ExtensionType.MintCloseAuthority,
+    ]);
+  
+    // Metadata to store in Mint Account
+    const metaData: TokenMetadata = {
+      updateAuthority: updateAuthority,
+      mint: mint,
+      name: `${reading.id}:${reading.name}`,
+      description: reading.creative_description,
+      symbol: 'ORB',
+      uri: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
+      additionalMetadata: [[ "code", reading.representation], ["description", reading.creative_description], ["keywords", reading.keywords], ["advice", reading.advice], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return line }}).length]],
+    };
+  
+    // Size of MetadataExtension 2 bytes for type, 2 bytes for length
+    const metadataExtension = TYPE_SIZE + LENGTH_SIZE;
+    // Size of metadata
+    const metadataLen = pack(metaData).length;
+  
+    // Minimum lamports required for Mint Account
+    const lamports = await connection.getMinimumBalanceForRentExemption(
+      mintLen + metadataExtension + metadataLen
+    );
+  
+    // Instruction to invoke System Program to create new account
+    const createAccountInstruction = SystemProgram.createAccount({
+      fromPubkey: userPublicKey, // Account that will transfer lamports to created account
+      newAccountPubkey: mint, // Address of the account to create
+      space: mintLen, // Amount of bytes to allocate to the created account
+      lamports, // Amount of lamports transferred to created account
+      programId: TOKEN_2022_PROGRAM_ID, // Program assigned as owner of created account
+    });
+  
+    // Instruction to initialize the MetadataPointer Extension
+    const initializeMetadataPointerInstruction =
+      createInitializeMetadataPointerInstruction(
+        mint, // Mint Account address
+        updateAuthority, // Authority that can set the metadata address
+        mint, // Account address that holds the metadata
+        TOKEN_2022_PROGRAM_ID
+      );
+    // Instruction to initialize the MintCloseAuthority Extension
+    const initializeMintCloseAuthorityInstruction =
+      createInitializeMintCloseAuthorityInstruction(
+        mint, // Mint Account address
+        mintAuthority, // Designated Close Authority
+        TOKEN_2022_PROGRAM_ID // Token Extension Program ID
+      );
+  
+    // Instruction to initialize Mint Account data
+    const initializeMintInstruction = createInitializeMintInstruction(
+      mint, // Mint Account Address
+      decimals, // Decimals of Mint
+      mintAuthority, // Designated Mint Authority
+      null, // Optional Freeze Authority
+      TOKEN_2022_PROGRAM_ID // Token Extension Program ID
+    );
+  
+    // Instruction to initialize Metadata Account data
+    const initializeMetadataInstruction = createInitializeInstruction({
+      programId: TOKEN_2022_PROGRAM_ID, // Token Extension Program as Metadata Program
+      metadata: mint, // Account address that holds the metadata
+      updateAuthority: updateAuthority, // Authority that can update the metadata
+      mint: mint, // Mint Account address
+      mintAuthority: mintAuthority, // Designated Mint Authority
+      name: metaData.name,
+      symbol: metaData.symbol,
+      uri: metaData.uri,
+    });
+    
+    // Add instructions to new transaction
+    transaction = new Transaction().add(
+      createAccountInstruction,
+      initializeMetadataPointerInstruction,
+      initializeMintCloseAuthorityInstruction,
+      initializeMintInstruction,
+      initializeMetadataInstruction,
+    );
+
+    transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+    transaction.feePayer = userPublicKey;
+
+    return transaction;
+}
 
 export default async function handler(
   req: NextApiRequest,
@@ -2797,42 +2919,9 @@ export default async function handler(
     } else if (req.method == 'POST') {
       if (req.body && req.body.account) {
         try {
-          const mySigner = createNoopSigner(req.body.account);
-  
-          const message = 'Minting 1 fortune reading NFT from The Orb.'
-          const umi = createUmi('https://nonah-735t00-fast-mainnet.helius-rpc.com')
-  
-          umi.use(nftStorageUploader({ token: process.env.NFTSTORAGE_API_KEY! }))
-
-          const hexagram = generateHexagram();
-          const details = mapLinesToHexagramDetails(hexagram);
-  
-          const uri = await umi.uploader.uploadJson({
-          name: details.name ? `Reading No. ${details.id}: ${details.name}` : `Reading No. ${details.id}`,
-          description: details.creative_description,
-          image: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-          external_url: 'https://orb.vercel.xyz',
-          })
-  
-          const builder = new TransactionBuilder();
-          builder.add(create(umi, {
-              asset: mySigner,
-              name: 'Orb Reading',
-              uri: uri,
-              plugins: [
-                  {
-                      type: 'Attributes',
-                      attributeList: hexagram.map((line, index) => {
-                          return { key: `Line ${(index + 1)}`, value: line.symbol}
-                      })
-                  }
-              ]
-          }));
-  
-          const serializedTransaction = umi.transactions.serialize(builder.build(umi));
-          const serializedTransactionBuffer = Buffer.from(serializedTransaction);
-          const transaction = serializedTransactionBuffer.toString('base64')
-          const response = { transaction, message };
+          const transaction = await createNFT(req.body.account);
+          const txString = transaction.serialize().toString('base64')
+          const response = { transaction: txString, message: "Minting 1 fortune for 0.11 SOL..." };
           res.status(200).json(response);
         } catch (err) {
           console.log(err);
