@@ -20,7 +20,7 @@ export default async function handler(
   } else if (req.method == 'POST') {
     const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com')
     const recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
-      const amount = parseFloat(req.query.amount![0]);
+      const amount = Number(req.query.amount);
       const transaction = new Transaction().add(
           SystemProgram.transfer({
               fromPubkey: new PublicKey(req.body.account),

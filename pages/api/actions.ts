@@ -53,33 +53,33 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionGetResponse>,
 ) {
-    res.status(200).json({ 
-        "title": "Orb Reading",
-        "icon": "https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb2.PNG",
-        "description": "Ask the Orb for answers to your question. Donate SOL to keep the Orb spinning.",
-        "label": "Ask",
-        "links": {
-            "actions": [
-            {
-                "label": "Get Reading", // button text
-                "href": "/api/mint"
-            },
-            // {
-            //     "label": "Fortune Favors", // button text
-            //     "href": "/api/hello"
-            // },
-            {
-                "label": "Donate", // button text
-                "href": "/api/donate?amount={amount}", // or /api/donate?amount={amount}
-                "parameters": [
-                  // {amount} input field
-                  {
-                    "name": "amount", // input field name
-                    "label": "SOL Donation" // text input placeholder
-                  }
-                ]
+  res.status(200).json({ 
+    "title": "Orb Reading",
+    "icon": "https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb2.PNG",
+    "description": "Ask the Orb for answers to your question. Donate SOL to the Orb.",
+    "label": "Ask",
+    "links": {
+        "actions": [
+        {
+            "label": "Get Reading", // button text
+            "href": "/api/mint"
+        },
+        // {
+        //     "label": "Fortune Favors", // button text
+        //     "href": "/api/hello"
+        // },
+        {
+            "label": "Donate", // button text
+            "href": "/api/donate?amount={amount}", // or /api/donate?amount={amount}
+            "parameters": [
+              // {amount} input field
+              {
+                "name": "amount", // input field name
+                "label": "SOL Donation" // text input placeholder
               }
             ]
-        }
-     });
+          }
+        ]
+    }
+  });
 }

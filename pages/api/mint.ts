@@ -2839,6 +2839,7 @@ export default async function handler(
           res.status(400);
       }
     }
+    return res;
   } catch (err) {
     res.status(500).json({ transaction: '', message: `Error: ${err}` });
     return res;
