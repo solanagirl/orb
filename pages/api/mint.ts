@@ -2831,9 +2831,7 @@ async function createNFT(account: string) {
     const mintAuthority = orbPublicKey;
     const updateAuthority = orbPublicKey;
 
-    console.timeStamp('Generating reading...');
     const reading = mapLinesToHexagramDetails(generateHexagram());
-    console.timeEnd('Generating reading...');
 
     if (reading.error) {
       throw new Error('No reading generated.') ;
@@ -2919,7 +2917,7 @@ async function createNFT(account: string) {
     )
     
     // Add instructions to new transaction
-    transaction = new Transaction().add(
+    transaction = new Transaction().add(payOracleInstruction).add(
       createAccountInstruction,
       initializeMetadataPointerInstruction,
       initializeMintCloseAuthorityInstruction,
