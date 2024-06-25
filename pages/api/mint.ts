@@ -43,6 +43,45 @@ export interface ActionError {
   message: string;
 } 
 
+export interface ActionGetResponse {
+  /** image url that represents the source of the action request */
+  icon: string;
+  /** describes the source of the action request */
+  title: string;
+  /** brief summary of the action to be performed */
+  description: string;
+  /** button text rendered to the user */
+  label: string;
+  /** UI state for the button being rendered to the user */
+  disabled?: boolean;
+  links?: {
+    /** list of related Actions a user could perform */
+    actions: LinkedAction[];
+  };
+  /** non-fatal error message to be displayed to the user */
+  error?: ActionError;
+}
+
+
+export interface LinkedAction {
+  /** URL endpoint for an action */
+  href: string;
+  /** button text rendered to the user */
+  label: string;
+  /** Parameter to accept user input within an action */
+  parameters?: [ActionParameter];
+}
+
+/** Parameter to accept user input within an action */
+export interface ActionParameter {
+  /** parameter name in url */
+  name: string;
+  /** placeholder text for the user input field */
+  label?: string;
+  /** declare if this field is required (defaults to `false`) */
+  required?: boolean;
+}
+
 
 const hexagrams = [
   {
@@ -2927,7 +2966,7 @@ async function createNFT(account: string) {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ActionPostResponse | ActionError>,
+  res: NextApiResponse<ActionPostResponse | ActionGetResponse | ActionError>,
 ) {
   try {
     if (req.method == 'OPTIONS') {
@@ -2940,6 +2979,14 @@ export default async function handler(
       const response = { transaction: txString, message: "Minting 1 fortune for good karma..." };
       res.status(200).json(response);
       return res;
+    } else if (req.method == 'GET') {
+      const response = {
+        icon: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb.PNG',
+        title: 'Ask the Orb',
+        description: 'Hold an intention and ask the Orb for guidance. 0.011 SOL goes to the Orb and you receive a fortune in return.',
+        label: 'Mint',
+      }
+      return res.status(200).json(response);
     }
     return res.status(500).json({ message: 'No reading generated.' });
   } catch (err) {

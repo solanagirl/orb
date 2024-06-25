@@ -16,8 +16,7 @@ export default async function handler(
 ) {
   try {
   if (req.method == 'OPTIONS') {
-    res.status(200).end();   
-    return res;
+    return res.status(200).end();   
   } else if (req.method == 'POST') {
     const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com')
     const recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
@@ -38,6 +37,8 @@ export default async function handler(
 
       res.status(200).json({ transaction: txString, message: `Thanks for your ${req.query.amount} SOL donation to the Orb! 🔮` });   
       return res;
+    } else if (req.method == 'GET') {
+      return res.status(200).end();
     }
   } catch (err) {
     if (typeof err === 'string') {
