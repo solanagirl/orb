@@ -30,10 +30,10 @@ export default async function handler(
       )
 
       transaction.recentBlockhash = recentBlockhash;
-      transaction.feePayer = new PublicKey(req.body.account);
   
       const serializedTransaction = transaction.serialize();
       const txString = serializedTransaction.toString('base64')
+
       res.status(200).json({ transaction: txString, message: `Donate ${req.query.amount} SOL to the Orb` });   
       return res;
     }
