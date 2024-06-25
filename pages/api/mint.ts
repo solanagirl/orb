@@ -7,6 +7,7 @@ import {
   clusterApiUrl,
   sendAndConfirmTransaction,
   PublicKey,
+  LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import {
   ExtensionType,
@@ -19,6 +20,7 @@ import {
   getTokenMetadata,
   TYPE_SIZE,
   LENGTH_SIZE,
+  createTransferInstruction,
 } from "@solana/spl-token";
 import {
   createInitializeInstruction,
@@ -28,6 +30,7 @@ import {
   TokenMetadata,
 } from "@solana/spl-token-metadata";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { error } from "console";
 
 export interface ActionPostResponse {
     /** base64 encoded serialized transaction */
@@ -2907,6 +2910,13 @@ async function createNFT(account: string) {
       symbol: metaData.symbol,
       uri: metaData.uri,
     });
+
+    const payOracleInstruction = createTransferInstruction(
+      userPublicKey,
+      orbPublicKey,
+      userPublicKey,
+      0.11 * LAMPORTS_PER_SOL
+    )
     
     // Add instructions to new transaction
     transaction = new Transaction().add(
@@ -2915,6 +2925,7 @@ async function createNFT(account: string) {
       initializeMintCloseAuthorityInstruction,
       initializeMintInstruction,
       initializeMetadataInstruction,
+      payOracleInstruction
     );
 
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
@@ -2929,21 +2940,19 @@ export default async function handler(
   res: NextApiResponse<ActionPostResponse | ActionError>,
 ) {
   try {
-    if (req.method == 'OPTIONS') {
+    if (req.method === 'OPTIONS') {
       res.status(200).end();   
       return res;
-    } else if (req.method == 'POST') {
-      if (req.body && req.body.account) {
-          const transaction = await createNFT(req.body.account);
-          const serializedTx = transaction.serialize();
-          const txString = serializedTx.toString('base64');
-          const response = { transaction: txString, message: "Minting 1 fortune for 0.11 SOL..." };
-          res.status(200).json(response);
+    } else if (req.method === 'POST') {
+        const transaction = await createNFT(req.body.account);
+        const serializedTransaction = transaction.serialize({requireAllSignatures: false});
+        const txString = serializedTransaction.toString('base64');
+        const response = { transaction: txString, message: "Minting 1 fortune for 0.11 SOL..." };
+        res.status(200).json(response);
+        return res;
       } else {
-          res.status(400);
+        throw new Error('No reading generated.');
       }
-    }
-    return res;
   } catch (err) {
     if (err === 'No reading generated.') {
     res.status(500).json({ message: err });
