@@ -13,6 +13,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionPostResponse>,
 ) {
+  if (req.method == 'OPTIONS') {
     const amount = parseFloat(req.query.amount![0]);
     const transaction = new Transaction().add(
         SystemProgram.transfer({
@@ -26,4 +27,5 @@ export default function handler(
     const txString = serializedTransaction.toString('base64')
     res.status(200).json({ transaction: txString, message: `Donate ${req.query.amount} SOL to the Orb` });   
     return res;
+  } 
 }
