@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { Connection, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { ActionError } from "./actions";
 
 export interface ActionPostResponse {
     /** base64 encoded serialized transaction */
@@ -11,7 +12,7 @@ export interface ActionPostResponse {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ActionPostResponse>,
+  res: NextApiResponse<ActionPostResponse | ActionError>,
 ) {
   try {
   if (req.method == 'OPTIONS') {
@@ -39,7 +40,9 @@ export default async function handler(
       return res;
     }
   } catch (err) {
-    res.status(400).json({ transaction: '', message: `Error: ${err}` });
-    return res;
+    if (typeof err === 'string') {
+      res.status(500).json({ message: err });
+      return res;  
+    }
   }
 }

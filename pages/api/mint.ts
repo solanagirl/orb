@@ -36,6 +36,12 @@ export interface ActionPostResponse {
     message?: string;
   }
 
+export interface ActionError {
+  /** non-fatal error message to be displayed to the user */
+  message: string;
+} 
+
+
 const hexagrams = [
   {
     "id": 1,
@@ -2800,12 +2806,12 @@ function generateHexagram() {
     let hexagram: LineType[] = [];
 
     while (hexagram.length <= 6) {
-        const newLine = getCoinFlipLine();
-        hexagram = [...hexagram, newLine]; 
-        
-        if (hexagram.length === 6) {
-          return hexagram;
-        }
+      if (hexagram.length === 6) {
+        return hexagram;
+      }
+
+      const newLine = getCoinFlipLine();
+      hexagram = [...hexagram, newLine]; 
     }
     return hexagram;
 }
@@ -2823,7 +2829,11 @@ async function createNFT(account: string) {
     const updateAuthority = orbPublicKey;
 
     const reading = mapLinesToHexagramDetails(generateHexagram());
-  
+      
+    if (reading.error) {
+      throw new Error('No reading generated.') ;
+    }
+
     // Size of Mint Account with extension
     const mintLen = getMintLen([
       ExtensionType.MetadataPointer,
@@ -2908,12 +2918,13 @@ async function createNFT(account: string) {
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
 
+
     return transaction;
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ActionPostResponse>,
+  res: NextApiResponse<ActionPostResponse | ActionError>,
 ) {
   try {
     if (req.method == 'OPTIONS') {
@@ -2921,22 +2932,20 @@ export default async function handler(
       return res;
     } else if (req.method == 'POST') {
       if (req.body && req.body.account) {
-        try {
           const transaction = await createNFT(req.body.account);
-          const txString = transaction.serialize().toString('base64')
+          const serializedTx = transaction.serialize();
+          const txString = serializedTx.toString('base64');
           const response = { transaction: txString, message: "Minting 1 fortune for 0.11 SOL..." };
           res.status(200).json(response);
-        } catch (err) {
-          console.log(err);
-          res.status(400);
-        }
       } else {
           res.status(400);
       }
     }
     return res;
   } catch (err) {
-    res.status(500).json({ transaction: '', message: `Error: ${err}` });
+    if (err === 'No reading generated.') {
+    res.status(500).json({ message: err });
     return res;
+    }
   }
 }
