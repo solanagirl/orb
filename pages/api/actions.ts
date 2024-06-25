@@ -62,7 +62,7 @@ export default function handler(
     res.status(200).json({ 
         "title": "Orb Reading",
         "icon": "https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb2.PNG",
-        "description": "Ask the Orb with your SOL to get a reading. May Fortune favor you. Donate to support.",
+        "description": "Ask the Orb for answers to your question. Donate SOL to keep the Orb spinning.",
         "label": "Ask",
         "links": {
             "actions": [
