@@ -13,22 +13,17 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionPostResponse>,
 ) {
-    try {
-        const amount = parseFloat(req.query.amount![0]);
-        const transaction = new Transaction().add(
-            SystemProgram.transfer({
-                fromPubkey: new PublicKey(req.body.account),
-                toPubkey: new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk'),
-                lamports: amount / LAMPORTS_PER_SOL
-            })
-        )
-    
-        const serializedTransaction = transaction.serialize();
-        const txString = serializedTransaction.toString('base64')
-    
-      
-      res.status(200).json({ transaction: txString, message: `Donate ${req.query.amount} SOL to the Orb` });    
-    } catch (err) {
-        res.status(500);
-    }
+    const amount = parseFloat(req.query.amount![0]);
+    const transaction = new Transaction().add(
+        SystemProgram.transfer({
+            fromPubkey: new PublicKey(req.body.account),
+            toPubkey: new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk'),
+            lamports: amount / LAMPORTS_PER_SOL
+        })
+    )
+
+    const serializedTransaction = transaction.serialize();
+    const txString = serializedTransaction.toString('base64')
+    res.status(200).json({ transaction: txString, message: `Donate ${req.query.amount} SOL to the Orb` });   
+    return res;
 }
