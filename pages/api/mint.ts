@@ -2925,7 +2925,6 @@ async function createNFT(account: string) {
       initializeMintCloseAuthorityInstruction,
       initializeMintInstruction,
       initializeMetadataInstruction,
-      payOracleInstruction
     );
 
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
@@ -2947,7 +2946,7 @@ export default async function handler(
         const transaction = await createNFT(req.body.account);
         const serializedTransaction = transaction.serialize({requireAllSignatures: false});
         const txString = serializedTransaction.toString('base64');
-        const response = { transaction: txString, message: "Minting 1 fortune for 0.11 SOL..." };
+        const response = { transaction: txString, message: "Minting 1 fortune for good karma..." };
         res.status(200).json(response);
         return res;
       } else {
