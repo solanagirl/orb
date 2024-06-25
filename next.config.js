@@ -8,7 +8,7 @@ const nextConfig = {
                 source: "/api/actions",
                 headers: [
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
-                    { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,OPTIONS" },
+                    { key: "Access-Control-Allow-Methods", value: ["GET","POST","PUT","OPTIONS"] },
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
@@ -20,7 +20,7 @@ const nextConfig = {
                 source: "/api/mint",
                 headers: [
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
-                    { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,OPTIONS" },
+                    { key: "Access-Control-Allow-Methods", value: ["GET","POST","PUT","OPTIONS"] },
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
@@ -31,7 +31,7 @@ const nextConfig = {
                 source: "/api/donate",
                 headers: [
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
-                    { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,OPTIONS" },
+                    { key: "Access-Control-Allow-Methods", value: ["GET","POST","PUT","OPTIONS"] },
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
