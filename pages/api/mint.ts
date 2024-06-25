@@ -2909,15 +2909,15 @@ async function createNFT(account: string) {
       uri: metaData.uri,
     });
 
-    const payOracleInstruction = createTransferInstruction(
-      userPublicKey,
-      orbPublicKey,
-      userPublicKey,
-      0.11 * LAMPORTS_PER_SOL
-    )
+    // const payOracleInstruction = createTransferInstruction(
+    //   userPublicKey,
+    //   orbPublicKey,
+    //   userPublicKey,
+    //   0.11 * LAMPORTS_PER_SOL
+    // )
     
     // Add instructions to new transaction
-    transaction = new Transaction().add(payOracleInstruction).add(
+    transaction = new Transaction().add(
       createAccountInstruction,
       initializeMetadataPointerInstruction,
       initializeMintCloseAuthorityInstruction,
