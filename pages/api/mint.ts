@@ -2809,7 +2809,7 @@ function generateHexagram() {
 async function createNFT(account: string) {
     const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com');
     const userPublicKey = new PublicKey(account);
-    const orbPublicKey = new PublicKey('');
+    const orbPublicKey = new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk');
 
     let transaction: Transaction;
     const mintKeypair = Keypair.generate();
@@ -2830,13 +2830,12 @@ async function createNFT(account: string) {
     const metaData: TokenMetadata = {
       updateAuthority: updateAuthority,
       mint: mint,
-      name: `${reading.id}:${reading.name}`,
-      description: reading.creative_description,
+      name: reading ? `${reading.id}:${reading.name}` : `To be deciphered...`,
       symbol: 'ORB',
       uri: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-      additionalMetadata: [[ "code", reading.representation], ["description", reading.creative_description], ["keywords", reading.keywords], ["advice", reading.advice], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return line }}).length]],
+      additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
     };
-  
+
     // Size of MetadataExtension 2 bytes for type, 2 bytes for length
     const metadataExtension = TYPE_SIZE + LENGTH_SIZE;
     // Size of metadata

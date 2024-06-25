@@ -35,11 +35,11 @@ export default async function handler(
       const serializedTransaction = transaction.serialize({requireAllSignatures: false});
       const txString = serializedTransaction.toString('base64')
 
-      res.status(200).json({ transaction: txString, message: `Donate ${req.query.amount} SOL to the Orb` });   
+      res.status(200).json({ transaction: txString, message: `Thanks for your ${req.query.amount} SOL donation to the Orb! 🔮` });   
       return res;
     }
   } catch (err) {
-    res.status(500).json({ transaction: '', message: `Error: ${err}` });
+    res.status(400).json({ transaction: '', message: `Error: ${err}` });
     return res;
   }
 }
