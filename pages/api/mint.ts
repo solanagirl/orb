@@ -2948,20 +2948,21 @@ async function createNFT(account: string) {
     transaction = new Transaction().add(
       createAccountInstruction,
       initializeMetadataPointerInstruction,
+      initializeMintCloseAuthorityInstruction,
       initializeMintInstruction,
       initializeMetadataInstruction,
-    ).add(
-      SystemProgram.transfer({
-          fromPubkey: userPublicKey,
-          toPubkey: orbSigner.publicKey,
-          lamports: 0.011 * LAMPORTS_PER_SOL
-      }))
+    )
+    
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
     transaction.sign(orbSigner);
     transaction.sign(mintKeypair);
 
-    return transaction;
+    const serializedTransaction = transaction.serialize({requireAllSignatures: false});
+    const txString = serializedTransaction.toString('base64');
+
+
+    return txString;
 }
 
 export default async function handler(
@@ -2974,16 +2975,14 @@ export default async function handler(
       return res;
     } else if (req.method == 'POST') {
       const transaction = await createNFT(req.body.account);
-      const serializedTransaction = transaction.serialize({requireAllSignatures: false});
-      const txString = serializedTransaction.toString('base64');
-      const response = { transaction: txString, message: "Minting 1 fortune for good karma..." };
+      const response = { transaction: transaction, message: "Minting 1 fortune for good karma..." };
       res.status(200).json(response);
       return res;
     } else if (req.method == 'GET') {
-      const response = {
+      const response: ActionGetResponse = {
         icon: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/orb.PNG',
         title: 'Ask the Orb',
-        description: 'Hold an intention and ask the Orb for guidance. 0.011 SOL goes to the Orb and you receive a fortune in return.',
+        description: 'Hold an intention and ask the Orb for guidance and you receive a fortune in return.',
         label: 'Mint',
       }
       return res.status(200).json(response);
