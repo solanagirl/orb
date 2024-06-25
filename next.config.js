@@ -25,12 +25,14 @@ const nextConfig = {
                     { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Encoding, Content-Type, Date" },
                 ]
             },            {
-                source: "/api/donate?amount=",
+                source: "/api/donate",
                 headers: [
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
                     { key: "Access-Control-Allow-Methods", value: "*" },
                     { key: "Accept-Encoding", value: "compress" },
+                    { key: "Content-Type", value: "application/json" },
+                    { key: "Content-Encoding", value: "compress" },
                     { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Encoding, Content-Type, Date" },
                 ]
             }
