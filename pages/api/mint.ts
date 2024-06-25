@@ -2789,49 +2789,58 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ActionPostResponse>,
 ) {
-    
-    if (req.body && req.body.account) {
-      try {
-        const mySigner = createNoopSigner(req.body.account);
-
-        const message = 'Minting 1 fortune reading NFT from The Orb.'
-        const umi = createUmi('https://api.mainnet-beta.solana.com')
-
-        const hexagram = generateHexagram();
-        const details = mapLinesToHexagramDetails(hexagram);
-
-        const uri = await umi.uploader.uploadJson({
-        name: details.name ? `Reading No. ${details.id}: ${details.name}` : `Reading No. ${details.id}`,
-        description: details.creative_description,
-        image: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-        external_url: 'https://orb.vercel.xyz',
-        })
-
-        const builder = new TransactionBuilder();
-        builder.add(create(umi, {
-            asset: mySigner,
-            name: 'Orb Reading',
-            uri: uri,
-            plugins: [
-                {
-                    type: 'Attributes',
-                    attributeList: hexagram.map((line, index) => {
-                        return { key: `Line ${(index + 1)}`, value: line.symbol}
-                    })
-                }
-            ]
-        }));
-
-        const serializedTransaction = umi.transactions.serialize(builder.build(umi));
-        const serializedTransactionBuffer = Buffer.from(serializedTransaction);
-        const transaction = serializedTransactionBuffer.toString('base64')
-        const response = { transaction, message };
-        res.status(200).json(response);
-      } catch (err) {
-        console.log(err);
-        res.status(400);
+  try {
+    if (req.method == 'OPTIONS') {
+      res.status(200).end();   
+      return res;
+    } else if (req.method == 'POST') {
+      if (req.body && req.body.account) {
+        try {
+          const mySigner = createNoopSigner(req.body.account);
+  
+          const message = 'Minting 1 fortune reading NFT from The Orb.'
+          const umi = createUmi('https://api.mainnet-beta.solana.com')
+  
+          const hexagram = generateHexagram();
+          const details = mapLinesToHexagramDetails(hexagram);
+  
+          const uri = await umi.uploader.uploadJson({
+          name: details.name ? `Reading No. ${details.id}: ${details.name}` : `Reading No. ${details.id}`,
+          description: details.creative_description,
+          image: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
+          external_url: 'https://orb.vercel.xyz',
+          })
+  
+          const builder = new TransactionBuilder();
+          builder.add(create(umi, {
+              asset: mySigner,
+              name: 'Orb Reading',
+              uri: uri,
+              plugins: [
+                  {
+                      type: 'Attributes',
+                      attributeList: hexagram.map((line, index) => {
+                          return { key: `Line ${(index + 1)}`, value: line.symbol}
+                      })
+                  }
+              ]
+          }));
+  
+          const serializedTransaction = umi.transactions.serialize(builder.build(umi));
+          const serializedTransactionBuffer = Buffer.from(serializedTransaction);
+          const transaction = serializedTransactionBuffer.toString('base64')
+          const response = { transaction, message };
+          res.status(200).json(response);
+        } catch (err) {
+          console.log(err);
+          res.status(400);
+        }
+      } else {
+          res.status(400);
       }
-    } else {
-        res.status(400);
     }
+  } catch (err) {
+    res.status(500).json({ transaction: '', message: `Error: ${err}` });
+    return res;
+  }
 }

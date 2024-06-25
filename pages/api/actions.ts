@@ -64,10 +64,10 @@ export default function handler(
                 "label": "Get Reading", // button text
                 "href": "/api/mint"
             },
-            {
-                "label": "Fortune Favors", // button text
-                "href": "/api/hello"
-            },
+            // {
+            //     "label": "Fortune Favors", // button text
+            //     "href": "/api/hello"
+            // },
             {
                 "label": "Donate", // button text
                 "href": "/api/donate?amount={amount}", // or /api/donate?amount={amount}
