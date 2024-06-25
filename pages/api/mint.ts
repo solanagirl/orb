@@ -2801,7 +2801,11 @@ function generateHexagram() {
 
     while (hexagram.length <= 6) {
         const newLine = getCoinFlipLine();
-        hexagram = [...hexagram, newLine];    
+        hexagram = [...hexagram, newLine]; 
+        
+        if (hexagram.length === 6) {
+          return hexagram;
+        }
     }
     return hexagram;
 }
