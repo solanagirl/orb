@@ -2823,6 +2823,7 @@ async function createNFT(account: string) {
     const connection = new Connection('https://nonah-735t00-fast-mainnet.helius-rpc.com');
     const userPublicKey = new PublicKey(account);
     const orbPublicKey = new PublicKey('6n9FpZgTgbhoB8dxw9wfzGkC4r5Qrf9wU69SfkY6s7Nk');
+    const orbSigner = Keypair.fromSecretKey(Uint8Array.from(JSON.parse(process.env.ORB_SECRET!)));
 
     let transaction: Transaction;
     const mintKeypair = Keypair.generate();
@@ -2846,8 +2847,7 @@ async function createNFT(account: string) {
       name: reading.name ? `${reading.id}:${reading.name}` : `To be deciphered...`,
       symbol: 'ORB',
       uri: 'https://shdw-drive.genesysgo.net/G1Tzt42SDqCV3x9vPY5X826foA8fEk8BR4bB5wARh75d/askorbxyz.PNG',
-      additionalMetadata: []
-      // additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
+      additionalMetadata: [[ "code", reading.representation!], ["description", reading.creative_description!], ["keywords", reading.keywords!.toString()], ["advice", reading.advice!], ["changing aspects", reading.changing?.filter((line) => { if (line !== undefined) { return {line}.line.line_number }}).toString()!]],
     };
 
     // Size of MetadataExtension 2 bytes for type, 2 bytes for length
@@ -2906,18 +2906,10 @@ async function createNFT(account: string) {
       uri: metaData.uri,
     });
 
-    // const payOracleInstruction = createTransferInstruction(
-    //   userPublicKey,
-    //   orbPublicKey,
-    //   userPublicKey,
-    //   0.11 * LAMPORTS_PER_SOL
-    // )
-    
     // Add instructions to new transaction
     transaction = new Transaction().add(
       createAccountInstruction,
       initializeMetadataPointerInstruction,
-      initializeMintCloseAuthorityInstruction,
       initializeMintInstruction,
       initializeMetadataInstruction,
     ).add(
@@ -2929,7 +2921,7 @@ async function createNFT(account: string) {
   )
     transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
     transaction.feePayer = userPublicKey;
-
+    transaction.sign(orbSigner);
 
     return transaction;
 }
