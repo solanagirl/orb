@@ -12,7 +12,7 @@ const nextConfig = {
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
-                    { key: "Access-Control-Allow-Headers", value: "Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             },
             {
@@ -23,7 +23,8 @@ const nextConfig = {
                     { key: "Accept-Encoding", value: "compress" },
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
-                    { key: "Access-Control-Allow-Headers", value: "Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
+                    { key: "Accept-Encoding", value: "compress" },
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             },            {
                 source: "/api/donate",
@@ -33,7 +34,8 @@ const nextConfig = {
                     { key: "Accept-Encoding", value: "compress" },
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
-                    { key: "Access-Control-Allow-Headers", value: "Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
+                    { key: "Accept-Encoding", value: "compress" },
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             }
         ]
