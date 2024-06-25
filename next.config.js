@@ -10,7 +10,9 @@ const nextConfig = {
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
                     { key: "Access-Control-Allow-Methods", value: "*" },
-                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Type, Date" },
+                    { key: "Content-Type", value: "application/json" },
+                    { key: "Content-Encoding", value: "compress" },
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Encoding, Content-Type, Date" },
                 ]
             },
             {
@@ -19,7 +21,8 @@ const nextConfig = {
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" },
                     { key: "Access-Control-Allow-Methods", value: "*" },
-                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Type, Date" },
+                    { key: "Accept-Encoding", value: "compress" },
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Encoding, Content-Type, Date" },
                 ]
             },            {
                 source: "/api/donate",
@@ -27,7 +30,8 @@ const nextConfig = {
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" }, 
                     { key: "Access-Control-Allow-Methods", value: "*" },
-                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Type, Date" },
+                    { key: "Accept-Encoding", value: "compress" },
+                    { key: "Access-Control-Allow-Headers", value: "Accept, Accept-Version, Content-Length, Content-Encoding, Content-Type, Date" },
                 ]
             }
         ]
