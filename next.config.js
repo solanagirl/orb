@@ -12,6 +12,7 @@ const nextConfig = {
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
+                    { key: "Referrer-Policy", value: "no-referrer" },
                     { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             },
@@ -23,6 +24,7 @@ const nextConfig = {
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
+                    { key: "Referrer-Policy", value: "no-referrer" },
                     { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             },            {
@@ -33,6 +35,7 @@ const nextConfig = {
                     { key: "Content-Type", value: "application/json" },
                     { key: "Content-Encoding", value: "compress" },
                     { key: "Accept-Encoding", value: "compress" },
+                    { key: "Referrer-Policy", value: "no-referrer" },
                     { key: "Access-Control-Allow-Headers", value: "Accept, Content-Type, Authorization, Content-Encoding, Accept-Encoding"}
                 ]
             }
