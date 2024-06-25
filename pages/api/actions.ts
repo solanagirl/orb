@@ -133,10 +133,10 @@ export default function handler(
         //     "label": "Get Reading", // button text
         //     "href": "/api/mint"
         // },
-        // {
-        //     "label": "Fortune Favors", // button text
-        //     "href": "/api/hello"
-        // },
+        {
+            "label": "Get a Free Fortune", // button text
+            "href": "/api/getReading"
+        },
         {
             "label": "Donate", // button text
             "href": "/api/donate?amount={amount}", // or /api/donate?amount={amount}
